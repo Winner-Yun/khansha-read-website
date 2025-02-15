@@ -1,0 +1,77 @@
+[data-bs-theme=light] {
+    --theme-bg: #f8f9fa;
+}
+[data-bs-theme=dark] {
+    --theme-bg: #212525;
+}
+[data-bs-theme=light] {
+    --font-style: #1b1b1b;
+}
+[data-bs-theme=dark] {
+    --font-style: #e8e8e8;
+}
+.tap-custom{
+    border: none;
+}
+.tap-custom .nav-link {
+    font-size: 1rem;
+    color: var(--font-style);
+    border-radius: 0;
+    border: none;
+    background-color: var(--theme-bg);
+    padding: 18px;  
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tap-custom .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ffb700;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.tap-custom .nav-link:hover {
+    color: rgb(255, 183, 0);
+}
+
+.tap-custom .nav-link:hover::after {
+    width: 90%;
+}
+
+.tap-custom .nav-link.active {
+    background-color: var(--theme-bg);
+    color: rgb(255, 183, 0);
+}
+
+.rt-10{
+    border-radius: 10px 10px 0 0 !important;
+}
+.rb-10{
+    border-radius: 0px 0px 10px 10px !important;
+}
+
+.video-container video{
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+}
+
+.logo-tranding{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px 0 20px 0;
+}
+.logo-tranding-sec{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px 0 10px 0;
+    font-weight: 600;
+}
+.rs-tag{
+    border-radius: 2px 0 15px 0;
+    background-color: #ffaa0b;
+}

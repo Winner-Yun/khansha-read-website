@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting-page</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- link css bootstrap  -->
+    <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
+    <!-- link fontawesome icon  -->
+    <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.css">
+    <!-- link icon bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/show-book.css">
+    <link rel="stylesheet" href="../assets/css/sell-book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+    <style>
+        [data-bs-theme=light] {
+            --theme-bg: #f8f9fa;
+            --low-bg:rgba(255, 255, 255, 0.4);
+            --border-top: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        [data-bs-theme=dark] {
+            --theme-bg: #212525;
+            --low-bg:rgba(0, 0, 0, 0.4);
+            --border-top: 1px solid rgba(255, 255, 255, 0.125);
+        }
+    </style>
+<body>
+    <header class="position-sticky top-0 z-3">
+        <!-- Navbar -->
+        <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
+            <div class="container">
+                <div>
+                    <a href="/" class="navbar-brand text-decoration-none text-center">
+                        <div class="d-flex mt-4 gap-2">
+                            <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                            <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
+                                <span class="position-absolute top-custom start-100 translate-middle badge rounded-pill d-none d-lg-block">
+                                    <p class=" text-warning fs-12"> khanshaRead.com</p>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </h2>
+                        </div>                       
+                    </a>
+                </div>
+                <div>
+                    <form class="d-flex" role="search">
+                        <button class="btn border-0 search-icon d-none d-md-block" type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                        <input class="form-control me-2 border-0 circle style-form d-none d-md-block" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                        <button class="btn  search-icon d-block d-md-none btn-search-sm" type="button" data-bs-target="#modal-search" data-bs-toggle="modal"><i class='bx bx-search fs-4' ></i></button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-1">
+                        <!-- Button to trigger modal -->
+                        <button type="button" class="btn btn-link circle-btn nav-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#themeModal">
+                            <i class="bi theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                        </button>
+
+                        <div class=" dropdown mt-1">
+                            <button class="btn border-0 circle-btn align-items-center position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                <i class="fa-regular fa-bell"></i><span class="badge bg-danger rounded-circle position-absolute start-50"
+                                style="font-size: 7px; top: 7px;">4</span></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdwon-width" >
+                                <li class=" d-flex align-items-center">
+                                  <h1 class="dropdown-header fs-5" href="#"> ការជូនដំណឹង</h1>
+                                  <a href="#" class=" ms-auto pe-3"><i class='bx bx-dots-horizontal-rounded text-dark' ></i></a>
+                              </li>
+                                <li><hr class=" dropdown-divider"></li>
+                                
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text">បញ្ចុះ​ ២០% លើសៀវភៅព្រេងនិទាន</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text">បានបន្ថែមសៀវភៅ</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li style="width: 15rem;">
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li><a class="dropdown-item text-center" href="#"> មើលបន្ថែមទៀត</a></li>
+                              </ul>
+                        </div>
+                        
+                        
+                        <div class="dropdown">
+                            <button class=" btn border-0 position-relative" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/img/avatar-5.jpg" alt="profile" width="40px" height="40px" style="object-fit: cover; border-radius: 50%;">
+                                <span class="position-absolute top-100 start-50 translate-middle badge rounded-pill">
+                                    <i class='bx bxs-down-arrow text-warning'></i>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </button>
+                          
+                            <ul class="dropdown-menu  dropdown-menu-end mt-2">
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-id-card pe-1' ></i>គណនីរបស់អ្នក</a></li>
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-cog pe-1'></i>ការកំណត់</a></li>
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-log-out pe-1' ></i>ចាកចេញ</a></li>
+                            </ul>
+                          </div>
+                        
+                        <p class=" mt-auto font-change d-none d-md-block">យុន វិនន័រ</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </nav>
+
+        <!-- Sidebar Toggle Button -->
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-none d-md-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-start" style="width: 80px;" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class=" offcanvas-header">
+                <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+            </div>
+            <div class="offcanvas-body pt-5">
+                    <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                <i class='bx bx-home-alt'></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-book"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-clock-history"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-bookmark"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body active-style">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class=" offcanvas-bottom">
+                <button class="btn border-0 position-fixed bottom-0 ms-3" type="button" data-bs-dismiss="offcanvas" >
+                    <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+                </button>
+            </div>
+          </div>
+
+        <!-- Sidebar -->
+        <div class=" d-none d-lg-block sidebar">
+            <div class="collapse  collapse-horizontal position-absolute show" id="collapseWidthExample">
+                <div class="card card-body border-0 p-set" style="width: 80px; height: 100vh; border-radius: 0; background-color: var(--theme-bg);">
+                    <div>
+                        <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                    <i class='bx bx-home-alt'></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-book"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-clock-history"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
+                                    <i class="bi bi-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border-0">
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <button class="btn border-0 search-icon " type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                    <input class="form-control me-2 border-0 circle style-form bg-body" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning fw-light" id="themeModalLabel">
+                        <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                        ជ្រើសរើសពណ៍ផ្ទៃខាងក្រោយ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="light" type="button">
+                        <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i> ភ្លឺ
+                    </button>
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="dark" type="button">
+                        <i class="bi bi-moon-fill me-2 opacity-50" data-theme-icon="bi-moon-fill"></i> ងងឹត
+                    </button>
+                    <button class="btn w-100 d-flex align-items-center" data-bs-theme-value="auto" type="button">
+                        <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i> Auto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section class="profile-info mt-5">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-lg-4">
+                        <div class="card border-0 no-bg">
+                            <h6 class="card-title">ប្រវត្តិរូបរបស់អ្នក</h6>
+                            <p class="card-text opacity-50 mt-3">អ្នកអាចកែប្រែ ឬ កែ​សម្រួលប្រវិត្តរូបរបស់លោកអ្នកបាន។</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card border-0 no-bg">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-lg-2 text-center d-block d-lg-none">
+                                        <div class="card border-0 no-bg">
+                                            <div class="d-flex justify-content-end">
+                                                <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="120" height="120">
+                                            </div>
+                                            <div class="d-flex mt-3 gap-2 justify-content-end">
+                                                <button class="btn border rounded-5">ផ្លាស់ប្តូររូបភាព</button>
+                                                <button class="btn border rounded-circle"><i class="fa-light fa-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">គោត្តនាម</label>
+                                        <input type="text" class="form-control" value="យុន" readonly>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">នាម</label>
+                                        <input type="text" class="form-control" value="វិនន័រ" readonly>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end gap-2">
+                                    <button class="btn btn-warning text-light hvr-ripple-out">ផ្លាសប្តូរ គោត្តនាម & នាម</button>
+                                    <button class="btn disabled">រក្សាទុក</button>
+                                </div>
+                                <div class="mt-3 mb-3">
+                                    <label class="form-label">អុីម៉ែល</label>
+                                    <div class="d-flex gap-2">
+                                        <input type="email" class="form-control" value="winner@gmail.com" readonly>
+                                        <button class="btn  w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរពាក្យអុីម៉ែល</button>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">ពាក្យសំងាត់</label>
+                                    <div class="d-flex gap-2">
+                                        <input type="password" class="form-control" value="023042802" readonly>
+                                        <button class="btn w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរពាក្យសំងាត់</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 text-center d-none d-lg-block">
+                        <div class="card border-0 no-bg">
+                            <div class="d-flex justify-content-center">
+                                <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="120" height="120">
+                            </div>
+                            <div class="d-flex mt-3 gap-2 justify-content-center">
+                                <button class="btn border rounded-5">ផ្លាស់ប្តូររូបភាព</button>
+                                <button class="btn border rounded-circle"><i class="fa-light fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </section>
+        
+        <section class="container mt-5">
+            <div class="card border-0 no-bg">
+                <h6 class="card-title">ស្ថិតិការចំណាយលើសៀវភៅ</h6>
+                <p class="card-text opacity-50 mt-3">តាមដានចំណាយក្នុងការទិញសៀវភៅ។</p>
+            </div>
+            <div class="card border-0 no-bg pt-4">
+                <div class="progress mb-3">
+                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                </div>
+                <div class="mt-3">
+                    <div class="d-flex align-items-center">
+                        <span class="badge bg-primary me-2" style="width: 20px; height: 20px; display: inline-block;"></span> 75% - ទិញសៀវភៅថ្មី
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-success me-2" style="width: 20px; height: 20px; display: inline-block;"></span> 50% - ការបញ្ជាទិញកន្លងមក
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-danger me-2" style="width: 20px; height: 20px; display: inline-block;"></span> 30% - ការចំណាយផ្សេងៗ
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mt-5">
+            <div class="card border-0 no-bg">
+                <h6 class="card-title">ការកំណត់លើវេបសាយ</h6>
+                <p class="card-text opacity-50 mt-3">អ្នកអាចកំណត់ ឬ កែរប្រែមុខងារផ្សេងៗរបស់យើង។</p>
+            </div>
+        
+            <div class="card border-0 no-bg pt-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="list-group">
+                            
+                            <!-- 📢 Notifications -->
+                            <h6 class="mt-3">📢 ការជូនដំណឹង</h6>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទដំណើរការការជូនដំណឹង</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទការបញ្ជូនអុីម៉ែល</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បង្ហាញការបញ្ចុះតម្លៃសៀវភៅ</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+        
+                            <!-- 📖 Reading Preferences -->
+                            <h6 class="mt-4">📖 ជម្រើសអាន</h6>
+                            <div class="list-group-item">
+                                <label for="language" class="form-label">ជ្រើសរើសភាសា</label>
+                                <select class="form-select" id="language">
+                                    <option value="km">ខ្មែរ</option>
+                                    <option value="en">អង់គ្លេស</option>
+                                    <option value="fr">បារាំង</option>
+                                </select>
+                            </div>
+                            <div class="list-group-item">
+                                <label class="form-label">របៀបផ្ទុក</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="lightMode" checked>
+                                    <label class="form-check-label" for="lightMode">Light Mode</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="darkMode">
+                                    <label class="form-check-label" for="darkMode">Dark Mode</label>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <label for="fontSize" class="form-label">ទំហំអក្សរ</label>
+                                <select class="form-select" id="fontSize">
+                                    <option value="small">តូច</option>
+                                    <option value="medium" selected>មធ្យម</option>
+                                    <option value="large">ធំ</option>
+                                </select>
+                            </div>
+                            <div class="list-group-item">
+                                <label class="form-label">របៀបអាន</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="readingMode" id="dayMode" checked>
+                                    <label class="form-check-label" for="dayMode">ថ្ងៃ</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="readingMode" id="nightMode">
+                                    <label class="form-check-label" for="nightMode">យប់</label>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>រក្សាទុកទីតាំងអានដោយស្វ័យប្រវត្តិ</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+        
+                            <h6 class="mt-4">🔒 ភាពឯកជន & សន្តិសុខ</h6>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទការចែករំលែកបញ្ជីបំណង</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទការណែនាំសៀវភៅ</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+        
+                            <!-- 📥 Download Settings -->
+                            <h6 class="mt-4">📥 ការទាញយក</h6>
+                            <div class="list-group-item border-0">
+                                <label for="downloadFormat" class="form-label">ទ្រង់ទ្រាយសៀវភៅដែលចូលចិត្ត</label>
+                                <select class="form-select" id="downloadFormat">
+                                    <option value="pdf">PDF</option>
+                                    <option value="epub" selected>EPUB</option>
+                                    <option value="mobi">MOBI</option>
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="list-group-item pt-3 d-flex justify-content-end text-center">
+                            <button type="submit" class="btn btn-primary">រក្សាទុកការកំណត់</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+   
+
+    <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
+        <div class="container">
+            <div class=" row pt-5 p-md-5 ">
+                <div class=" col-lg-5">
+                    <img src="../assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
+                        <div class=" card-body  mt-3">
+                        <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
+                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">link បន្ថែម</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0 " style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ជំនួយ</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">Help and Support</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Become Author</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Get the app</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Tutorial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <button class=" btn btn-warning rounded-circle z-3 position-fixed hvr-ripple-out2" id="backToTop"><i class="fa-duotone fa-solid fa-up-from-line fs-2 text-body"></i></button>
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ទំនាក់ទំនង</h4>
+                            <p>54 St 606, Phnom Penh</p>
+                            <div class=" d-flex gap-2">
+                                <p>Email:</p>
+                                <a href="#">khanshaRead@gmail.com</a>
+                            </div>
+                            <div class=" d-flex">
+                                <p>Phone:</p>
+                                <p class=" fw-bold" style="font-size: 14px;">(855) 089 / 081 168168</p>
+                            </div>
+                            <div class=" d-flex">
+                                <a href="">
+                                    <a href="#"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/appstore.svg"
+                                        alt="" class="img-fluid" /></a>
+                                <a href="#" class="ms-2"><img
+                                        src="https://geeksui.codescandy.com/geeks/assets/images/svg/playstore.svg" alt=""
+                                        class="img-fluid" /></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-0  py-2 mt-5" style="border-top: var(--border-top);">
+                    
+                    <div class="col-lg-10 col-12">
+                        <div class="d-lg-flex align-items-center">
+                            <div class="me-4">
+                                <span>© 2024 khanshaRead.com</span>
+                            </div>
+                            <div>
+                                <nav class="nav nav-footer ">
+                                    <a class="nav-link ps-0 text-body hover-text" href="#">Privacy Policy</a>
+                                    <a class="nav-link px-2 px-md-3 text-body hover-text" href="#">Cookie Notice </a>
+                                    <a class="nav-link text-body hover-text" href="#">Terms of Use</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            
+
+</body>
+ <!-- link js bootstrap  -->
+ <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/theme.js"></script>
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="../assets/js/swipper.js"></script>
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+ <script src="../assets/js/animate.js"></script>
+ <script src="../assets/js/time_coundown.js"></script>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>read-the-book</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- link css bootstrap  -->
+    <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
+    <!-- link fontawesome icon  -->
+    <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.css">
+    <!-- link icon bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/show-book.css">
+    <link rel="stylesheet" href="../assets/css/sell-book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../assets/css/demo.css">
+</head>
+    <style>
+        [data-bs-theme=light] {
+            --theme-bg: #f8f9fa;
+            --low-bg:rgba(255, 255, 255, 0.4);
+            --border-top: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        [data-bs-theme=dark] {
+            --theme-bg: #212525;
+            --low-bg:rgba(0, 0, 0, 0.4);
+            --border-top: 1px solid rgba(255, 255, 255, 0.125);
+        }
+    </style>
+<body>
+    <header class="position-sticky top-0 z-3">
+        <!-- Navbar -->
+        <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
+            <div class="container">
+                <div>
+                    <a href="/" class="navbar-brand text-decoration-none text-center">
+                        <div class="d-flex mt-4 gap-2">
+                            <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                            <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
+                                <span class="position-absolute top-custom start-100 translate-middle badge rounded-pill d-none d-lg-block">
+                                    <p class=" text-warning fs-12"> khanshaRead.com</p>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </h2>
+                        </div>                       
+                    </a>
+                </div>
+                <div>
+                    <form class="d-flex" role="search">
+                        <button class="btn border-0 search-icon d-none d-md-block" type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                        <input class="form-control me-2 border-0 circle style-form d-none d-md-block" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                        <button class="btn  search-icon d-block d-md-none btn-search-sm" type="button" data-bs-target="#modal-search" data-bs-toggle="modal"><i class='bx bx-search fs-4' ></i></button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-1">
+                        <!-- Button to trigger modal -->
+                        <button type="button" class="btn btn-link circle-btn nav-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#themeModal">
+                            <i class="bi theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                        </button>
+
+                        <div class=" dropdown mt-1">
+                            <button class="btn border-0 circle-btn align-items-center position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                <i class="fa-regular fa-bell"></i><span class="badge bg-danger rounded-circle position-absolute start-50"
+                                style="font-size: 7px; top: 7px;">4</span></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdwon-width" >
+                                <li class=" d-flex align-items-center">
+                                  <h1 class="dropdown-header fs-5" href="#"> ការជូនដំណឹង</h1>
+                                  <a href="#" class=" ms-auto pe-3"><i class='bx bx-dots-horizontal-rounded text-dark' ></i></a>
+                              </li>
+                                <li><hr class=" dropdown-divider"></li>
+                                
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text">បញ្ចុះ​ ២០% លើសៀវភៅព្រេងនិទាន</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text">បានបន្ថែមសៀវភៅ</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li style="width: 15rem;">
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="../assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li><a class="dropdown-item text-center" href="#"> មើលបន្ថែមទៀត</a></li>
+                              </ul>
+                        </div>
+                        
+                        
+                        <div class="dropdown">
+                            <button class=" btn border-0 position-relative" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../assets/img/avatar-5.jpg" alt="profile" width="40px" height="40px" style="object-fit: cover; border-radius: 50%;">
+                                <span class="position-absolute top-100 start-50 translate-middle badge rounded-pill">
+                                    <i class='bx bxs-down-arrow text-warning'></i>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </button>
+                          
+                            <ul class="dropdown-menu  dropdown-menu-end mt-2">
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-id-card pe-1' ></i>គណនីរបស់អ្នក</a></li>
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-cog pe-1'></i>ការកំណត់</a></li>
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-log-out pe-1' ></i>ចាកចេញ</a></li>
+                            </ul>
+                          </div>
+                        
+                        <p class=" mt-auto font-change d-none d-md-block">យុន វិនន័រ</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </nav>
+
+        <!-- Sidebar Toggle Button -->
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-none d-md-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-start" style="width: 80px;" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class=" offcanvas-header">
+                <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+            </div>
+            <div class="offcanvas-body pt-5">
+                    <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                <i class='bx bx-home-alt'></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
+                                <i class="bi bi-book"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-clock-history"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-bookmark"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class=" offcanvas-bottom">
+                <button class="btn border-0 position-fixed bottom-0 ms-3" type="button" data-bs-dismiss="offcanvas" >
+                    <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+                </button>
+            </div>
+          </div>
+
+        <!-- Sidebar -->
+        <div class=" d-none d-lg-block sidebar">
+            <div class="collapse  collapse-horizontal position-absolute show" id="collapseWidthExample">
+                <div class="card card-body border-0 p-set" style="width: 80px; height: 100vh; border-radius: 0; background-color: var(--theme-bg);">
+                    <div>
+                        <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                    <i class='bx bx-home-alt'></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
+                                    <i class="bi bi-book"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-clock-history"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border-0">
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <button class="btn border-0 search-icon " type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                    <input class="form-control me-2 border-0 circle style-form bg-body" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning fw-light" id="themeModalLabel">
+                        <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                        ជ្រើសរើសពណ៍ផ្ទៃខាងក្រោយ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="light" type="button">
+                        <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i> ភ្លឺ
+                    </button>
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="dark" type="button">
+                        <i class="bi bi-moon-fill me-2 opacity-50" data-theme-icon="bi-moon-fill"></i> ងងឹត
+                    </button>
+                    <button class="btn w-100 d-flex align-items-center" data-bs-theme-value="auto" type="button">
+                        <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i> Auto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section class="display_book">
+            <div class=" container-fluid bg-custom p-lg-5 pt-3 pb-3">
+                <div class="container">
+                    <div class="row g-3">
+                        <div class="col-3 col-md-4 col-lg-1">
+                            <div class="card border-0 no-bg align-items-start align-items-md-end">
+                                <div class=" d-flex flex-column gap-5 mt-5">
+                                    <a href="demo-book-1.html" class=" fs-2 border border-2 border-warning rounded-circle px-2 text-warning hover-custom opacity-50"><i class='bx bx-up-arrow-alt'></i></a>
+                                    <a href="#" class=" fs-2 border rounded-circle px-2 text-warning opacity-50 " style="cursor:not-allowed;" ><i class='bx bx-down-arrow-alt' ></i></a>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="col-lg-3 col-md-8 col-9">
+                            <div class="card border-0 no-bg align-items-center">
+                                <img src="https://m.media-amazon.com/images/I/71LYn0JfZGS._AC_UF1000,1000_QL80_.jpg" style="width: 250px; height: 350px; object-fit: cover;" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="card border-0 no-bg py-3">
+                                <h3 class=" card-title">ប្រវត្តិសាស្រ្តនៃកម្ពុជា</h3>
+                                <p class=" mt-2 fw-medium">ប្រភេទរឿងប្រវត្តិសាស្ត្រ</p>
+                                <div class="d-flex align-items-center text-warning gap-1">
+                                    <i class='bx bxs-star text-warning '></i>
+                                    <i class='bx bxs-star text-warning '></i>
+                                    <i class='bx bxs-star text-warning '></i>
+                                    <i class='bx bxs-star text-warning '></i>
+                                    <i class='bx bxs-star-half text-warning '></i>
+                                    4.4
+                                </div>
+                                <p class="mt-3 text-3" style="line-height: 2rem;">ប្រទេសកម្ពុជាដែលយើងស្គាល់សព្វថ្ងៃនេះ មានប្រវត្តិសាស្រ្តឆ្លងកាត់រយៈពេលជាយូរលង់ និងពោរពេញដោយព្រឹត្តិការណ៍ដ៏សំខាន់ជាច្រើន។ កម្ពុជាមិនត្រឹមតែជាប្រទេសដែលមានកេរ្តិ៍ឈ្មោះនៃអរិយធម៌អង្គរ ឬអំណាចយុទ្ធសិល្ប៍នៃចក្រភពខ្មែរនោះទេ ប៉ុន្តែវាក៏ជាប្រទេសដែលបានឆ្លងកាត់ការក្រោកឈរឡើងវិញ ការបរាជ័យ និងការផ្លាស់ប្តូរអំណាចជាប្រចាំ។ បុរាណវិទូ និងអ្នកស្រាវជ្រាវជាច្រើនបានអះអាងថា អរិយធម៌ខ្មែរបានចាប់ផ្តើមតាំងពីពេលវេលាមុនសម័យអង្គរ ហើយវាបានអភិវឌ្ឍទៅជារដ្ឋធំសំខាន់មួយនៅអាស៊ីអាគ្នេយ៍។ </p>
+                                <div class="d-flex justify-content-between mt-4">
+
+                                    <button type="button" class="btn btn-lg btn-warning text-light hvr-ripple-out" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                        ចាប់ផ្តើមអាន<i class="fa-solid fa-arrow-up-right"></i>
+                                      </button>
+
+                                    <div class="d-flex gap-4">
+                                        <a href="" class="text-warning fs-5"><i class="fa-regular fa-bookmark"></i></a>
+                                        <a href="" class="text-warning fs-5"><i class="fa-light fa-share-nodes"></i></a>
+                                        <a href="#" class="text-warning toggleButton fs-5">
+                                            <i class="fa-light fa-heart"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        
+        
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content" style="min-height: 40rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+          
+                <div class="modal-header d-flex justify-content-between align-items-center text-body" style="border-bottom: none; padding: 20px 30px; background: var(--theme-bg); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
+                  <div class="header-title">
+                    <h4 class="modal-title text-warning fw-medium" id="documentModalLabel">ប្រវត្តិសាស្រ្តនៃកម្ពុជា</h4>
+                    <p style=" margin-bottom: 0;">
+                        ដំណើរឆ្លងកាត់ប្រវត្តិសាស្រ្តដ៏សម្បូរបែប និងផ្លាស់ប្តូររបស់កម្ពុជា។
+                    </p>
+                    <div class=" d-none d-md-block">
+                        <div>
+                            <span><strong class="text-warning fw-medium">អ្នកនិពន្ធ:</strong> John Doe</span> &nbsp;|&nbsp;
+                            <span><strong class="text-warning fw-medium">បានបង្ហោះ:</strong> 2025</span>
+                          </div>
+                          <div>
+                              <span><strong class="text-warning fw-medium">ប្រភេទរឿង:</strong> ប្រវត្តិសាស្រ្ត</span> &nbsp;|&nbsp;
+                              <span><strong class="text-warning fw-medium">អ្នកបង្ហោះ:</strong> គេនស្យា​ រីឌ</span>
+                          </div>
+                    </div>
+                    
+
+                    <div class=" d-block d-md-none">
+                        <div>
+                            <span><strong class="text-warning fw-medium">អ្នកនិពន្ធ:</strong> John Doe</span>
+                            
+                          </div>
+                        <div>
+                            <span><strong class="text-warning fw-medium">បានបង្ហោះ:</strong> 2025</span>
+                            
+                          </div>
+                        <div>
+                            <span><strong class="text-warning fw-medium">ប្រភេទរឿង:</strong> ប្រវត្តិសាស្រ្ត</span>
+                            
+                          </div>
+                        <div>
+                            <span><strong class="text-warning fw-medium">អ្នកបង្ហោះ:</strong> គេនស្យា​ រីឌ</span>  
+                          </div>
+                       
+                          
+                    </div>
+                    
+                  </div>
+
+                  <button type="button" class="btn btn-warning hvr-ripple-out rounded-3 btn-lg text-light" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-arrow-left"></i>
+                  </button>
+                </div>
+          
+                <div class="modal-body d-flex justify-content-between overflow-hidden p-0"  style="position: relative;">
+                    <div class="pdf-container" style="width: 100%; height: 100%;">
+                        <iframe src="https://drive.google.com/file/d/1X6LMg_M0lIiBEWZUrjZpNd2IYs54tdR1/preview"  style="width: 100%; height: 100%;" type="application/pdf"></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <img src="../assets/img/khanSha.png" width="50px" alt="">
+                    <a class="pe-2 text-warning no-bg  " href="https://drive.google.com/file/d/1kJfG20-WODrwv5qr1IoyPfsm80ZD_PyU/view" target="_blank">
+                        បើក PDF នេះក្នុង Google Drive 
+                    </a>
+                </div>
+                
+                https://drive.
+              </div>
+            </div>
+          </div>        
+
+        <section class=" review-container">
+            <div class="container mt-5">
+                <div class="row g-3">
+                    <div class="col-lg-7">
+                        <div class="card border-0 no-bg">
+                            <p class=" fw-medium fs-5">⁜ អំពីរសៀវភៅនេះ</p>
+                            <p>
+                                ប្រទេសកម្ពុជាដែលយើងស្គាល់សព្វថ្ងៃនេះ មានប្រវត្តិសាស្រ្តឆ្លងកាត់រយៈពេលជាយូរលង់ និងពោរពេញដោយព្រឹត្តិការណ៍ដ៏សំខាន់ជាច្រើន។ កម្ពុជាមិនត្រឹមតែជាប្រទេសដែលមានកេរ្តិ៍ឈ្មោះនៃអរិយធម៌អង្គរ ឬអំណាចយុទ្ធសិល្ប៍នៃចក្រភពខ្មែរនោះទេ ប៉ុន្តែវាក៏ជាប្រទេសដែលបានឆ្លងកាត់ការក្រោកឈរឡើងវិញ ការបរាជ័យ និងការផ្លាស់ប្តូរអំណាចជាប្រចាំ។ បុរាណវិទូ និងអ្នកស្រាវជ្រាវជាច្រើនបានអះអាងថា អរិយធម៌ខ្មែរបានចាប់ផ្តើមតាំងពីពេលវេលាមុនសម័យអង្គរ ហើយវាបានអភិវឌ្ឍទៅជារដ្ឋធំសំខាន់មួយនៅអាស៊ីអាគ្នេយ៍។
+                            </p>
+                            <p>ក្នុងសៀវភៅនេះ អ្នកនឹងបានធ្លាប់រំលឹកទៅកាន់អរិយធម៌បុរាណរបស់កម្ពុជា ពីសម័យបុរាណដើមមកដល់សម័យទំនើប។ យើងនឹងសិក្សាលើការកសាងអំណាច របបរដ្ឋាភិបាល ប្រព័ន្ធសេដ្ឋកិច្ច សាសនា និងវប្បធម៌ដែលបានបន្តផ្តល់ស្លាកសញ្ញាអោយជាតិនេះ។</p>
+
+                            <p>ឆ្លងកាត់តំបន់ព្រិលព្រួយជាច្រើន កម្ពុជាបាននាំមកជាមួយនូវភាពរីកចម្រើន ការផ្លាស់ប្តូរទិន្នន័យបុរាណ និងភាពស្មុគស្មាញនៃអតីតកាល ដែលពោរពេញដោយក្តីស្រមៃ សង្ឃឹម និងភាពជឿជាក់មួយថ្មីសម្រាប់អនាគត។</p>
+
+                            <p class=" fw-medium fs-5">⁜ ការបញ្ចេញមតិ</p>
+
+                                <div class="d-flex align-items-center gap-5 mt-3 w-100">
+                          
+                                    <div class="review-container w-100">
+                                        <div class="ms-4 w-100">
+                        
+                                            <div id="review-details" class="review-details">
+                                                <div class="review-item" id="current-review">
+                                                    <div class="d-flex align-items-center">
+                                                        <img id="user-profile" src="../assets/img/avata/avatar-1.jpg" alt="User profile" />
+                                                        <div class="ms-3">
+                                                            <h6 class="mb-0" id="user-name">User2</h6>
+                                                            <small class="text-muted text" id="user-time">បានបង្ហោះ 2 ម៉ោងមុន</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mt-3" style="font-style: italic;" id="user-review"  >This book is an exciting journey filled with mystery and twists! A must-read.</p>
+                                                    
+                                                  
+                                                    <div class="like-section gap-3 d-flex justify-content-end">
+                                                        <button  class="btn border-warning hover-custom text-warning toggleButton">
+                                                            2000 <i class="fa-light fa-heart"></i>
+                                                        </button>
+                                                        <button  class="btn border-warning hover-custom text-warning">
+                                                            <i class="fa-light fa-share-nodes"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                
+                                    <div class="d-flex flex-column align-items-center ms-3">
+                                        <a href="#" id="arrow-up" class="btn border-warning  hover-custom text-warning rounded-circle  mb-4"><i class='bx bx-up-arrow-alt'></i></a>
+                                        <a href="#" id="arrow-down" class="btn border-warning  hover-custom text-warning rounded-circle "><i class='bx bx-down-arrow-alt' ></i></a>
+                                    </div>
+                                </div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="card border-0 rounded-0 no-bg px-lg-5">
+                            <p class=" fw-medium fs-5">⁜​ កែសម្រួលដោយ</p>
+                            <p class="mt-2">លោក ប៊ុន ធឿន(អ្នកនិពន្ធ), បឿប បូណា, M.r Jhon, Ms KimBona</p>
+                            <p class=" fw-medium fs-5 mt-5">⁜​ ភាសារ</p>
+                            <p class="mt-3">អងគ្លេស (USA & UK)</p>
+                            <p class=" fw-medium fs-5 mt-5">⁜​ រក្សាសិទ្ធិដោយ</p>
+                            <p class="mt-2">© Captivating History (April 20, 2021)</p>
+                            <p class=" fw-medium fs-5 mt-5">⁜​ ចែករំលែកត៏ដោយ</p>
+                            <p class="mt-2">© គេនស្យា​ រីឌ (khanSha Read)</p>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+
+    <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
+        <div class="container">
+            <div class=" row pt-5 p-md-5 ">
+                <div class=" col-lg-5">
+                    <img src="../assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
+                        <div class=" card-body  mt-3">
+                        <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
+                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">link បន្ថែម</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0 " style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ជំនួយ</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">Help and Support</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Become Author</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Get the app</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Tutorial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <button class=" btn btn-warning rounded-circle z-3 position-fixed hvr-ripple-out2" id="backToTop"><i class="fa-duotone fa-solid fa-up-from-line fs-2 text-body"></i></button>
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ទំនាក់ទំនង</h4>
+                            <p>54 St 606, Phnom Penh</p>
+                            <div class=" d-flex gap-2">
+                                <p>Email:</p>
+                                <a href="#">khanshaRead@gmail.com</a>
+                            </div>
+                            <div class=" d-flex">
+                                <p>Phone:</p>
+                                <p class=" fw-bold" style="font-size: 14px;">(855) 089 / 081 168168</p>
+                            </div>
+                            <div class=" d-flex">
+                                <a href="">
+                                    <a href="#"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/appstore.svg"
+                                        alt="" class="img-fluid" /></a>
+                                <a href="#" class="ms-2"><img
+                                        src="https://geeksui.codescandy.com/geeks/assets/images/svg/playstore.svg" alt=""
+                                        class="img-fluid" /></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-0  py-2 mt-5" style="border-top: var(--border-top);">
+                    
+                    <div class="col-lg-10 col-12">
+                        <div class="d-lg-flex align-items-center">
+                            <div class="me-4">
+                                <span>© 2024 khanshaRead.com</span>
+                            </div>
+                            <div>
+                                <nav class="nav nav-footer ">
+                                    <a class="nav-link ps-0 text-body hover-text" href="#">Privacy Policy</a>
+                                    <a class="nav-link px-2 px-md-3 text-body hover-text" href="#">Cookie Notice </a>
+                                    <a class="nav-link text-body hover-text" href="#">Terms of Use</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            
+
+</body>
+ <!-- link js bootstrap  -->
+ <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/theme.js"></script>
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="../assets/js/swipper.js"></script>
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+ <script src="../assets/js/animate.js"></script>
+ <script src="../assets/js/time_coundown.js"></script>
+ <script src="../assets/js/demo-reviews.js"></script>
+</html>

@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khanshaRead</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- link css bootstrap  -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.css">
+    <!-- link fontawesome icon  -->
+    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.css">
+    <!-- link icon bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="assets/img/khanSha.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+    <style>
+        [data-bs-theme=light] {
+            --theme-bg: #f8f9fa;
+            --low-bg:rgba(255, 255, 255, 0.4);
+            --border-top: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        [data-bs-theme=dark] {
+            --theme-bg: #212525;
+            --low-bg:rgba(0, 0, 0, 0.4);
+            --border-top: 1px solid rgba(255, 255, 255, 0.125);
+        }
+    </style>
+<body>
+    <header class="position-sticky top-0 z-3">
+        <!-- Navbar -->
+        <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
+            <div class="container">
+                <div>
+                    <a href="/" class="navbar-brand text-decoration-none text-center">
+                        <div class="d-flex mt-4 gap-2">
+                            <img src="assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                            <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
+                                <span class="position-absolute top-custom start-100 translate-middle badge rounded-pill d-none d-lg-block">
+                                    <p class=" text-warning fs-12"> khanshaRead.com</p>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </h2>
+                        </div>                       
+                    </a>
+                </div>
+                <div>
+                    <form class="d-flex" role="search">
+                        <button class="btn border-0 search-icon d-none d-md-block" type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                        <input class="form-control me-2 border-0 circle style-form d-none d-md-block" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                        <button class="btn  search-icon d-block d-md-none btn-search-sm" type="button" data-bs-target="#modal-search" data-bs-toggle="modal"><i class='bx bx-search fs-4' ></i></button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-1">
+                        <!-- Button to trigger modal -->
+                        <button type="button" class="btn btn-link circle-btn nav-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#themeModal">
+                            <i class="bi theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                        </button>
+
+                        <div class=" dropdown mt-1">
+                            <button class="btn border-0 circle-btn align-items-center position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                                <i class="fa-regular fa-bell"></i><span class="badge bg-danger rounded-circle position-absolute start-50"
+                                style="font-size: 7px; top: 7px;">4</span></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end dropdwon-width" >
+                                <li class=" d-flex align-items-center">
+                                  <h1 class="dropdown-header fs-5" href="#"> ការជូនដំណឹង</h1>
+                                  <a href="#" class=" ms-auto pe-3"><i class='bx bx-dots-horizontal-rounded text-dark' ></i></a>
+                              </li>
+                                <li><hr class=" dropdown-divider"></li>
+                                
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text">បញ្ចុះ​ ២០% លើសៀវភៅព្រេងនិទាន</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li>
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text">បានបន្ថែមសៀវភៅ</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li style="width: 15rem;">
+                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
+                                      <div>
+                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
+                                      </div>
+                                      
+                                      <div class=" dropdown-item-text">
+                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
+                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
+                                      </div>
+      
+                                      <div class=" my-auto" style=" margin-right: 1rem;">
+                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li><a class="dropdown-item text-center" href="#"> មើលបន្ថែមទៀត</a></li>
+                              </ul>
+                        </div>
+                        
+                        
+                        <div class="dropdown">
+                            <button class=" btn border-0 position-relative" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/img/avatar-5.jpg" alt="profile" width="40px" height="40px" style="object-fit: cover; border-radius: 50%;">
+                                <span class="position-absolute top-100 start-50 translate-middle badge rounded-pill">
+                                    <i class='bx bxs-down-arrow text-warning'></i>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </button>
+                          
+                            <ul class="dropdown-menu  dropdown-menu-end mt-2">
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-id-card pe-1' ></i>គណនីរបស់អ្នក</a></li>
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-cog pe-1'></i>ការកំណត់</a></li>
+                              <li><a class="dropdown-item" href="#"><i class='bx bx-log-out pe-1' ></i>ចាកចេញ</a></li>
+                            </ul>
+                          </div>
+                        
+                        <p class=" mt-auto font-change d-none d-md-block">យុន វិនន័រ</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </nav>
+
+        <!-- Sidebar Toggle Button -->
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-none d-md-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-start" style="width: 80px;" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class=" offcanvas-header">
+                <img src="assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+            </div>
+            <div class="offcanvas-body pt-5">
+                    <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style" aria-current="page">
+                                <i class='bx bx-home-alt'></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-book"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-clock-history"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-bookmark"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class=" offcanvas-bottom">
+                <button class="btn border-0 position-fixed bottom-0 ms-3" type="button" data-bs-dismiss="offcanvas" >
+                    <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+                </button>
+            </div>
+          </div>
+
+        <!-- Sidebar -->
+        <div class=" d-none d-lg-block sidebar">
+            <div class="collapse  collapse-horizontal position-absolute show" id="collapseWidthExample">
+                <div class="card card-body border-0 p-set" style="width: 80px; height: 100vh; border-radius: 0; background-color: var(--theme-bg);">
+                    <div>
+                        <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style" aria-current="page">
+                                    <i class='bx bx-home-alt'></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-book"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-clock-history"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border-0">
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <button class="btn border-0 search-icon " type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                    <input class="form-control me-2 border-0 circle style-form bg-body" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning fw-light" id="themeModalLabel">
+                        <img src="assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                        ជ្រើសរើសពណ៍ផ្ទៃខាងក្រោយ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="light" type="button">
+                        <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i> ភ្លឺ
+                    </button>
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="dark" type="button">
+                        <i class="bi bi-moon-fill me-2 opacity-50" data-theme-icon="bi-moon-fill"></i> ងងឹត
+                    </button>
+                    <button class="btn w-100 d-flex align-items-center" data-bs-theme-value="auto" type="button">
+                        <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i> Auto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class=" hero-banner">
+            <div class=" container">
+                <div class="row g-3 p-md-5 p-3">
+                    <div class="col-lg-7">
+                        <div class="hero-banner d-flex flex-column align-items-start gap-md-4 gap-2">
+                            <h4 class="display-6 fw-bold">តោះអានជាមួយ​​ <b class=" text-warning typewriter"></b></h4>
+                            <p class="lead">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
+                                ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                            <a href="./pages/demo-book.html" class="btn  btn-warning text-light fw-bold btn-lg d-flex align-items-center hvr-ripple-out">
+                                ចាប់ផ្តើមអាន<i class="fa-solid fa-arrow-up-right"></i>
+                            </a>
+                        </div>
+                        
+                            <div class="swiper mySwiper2 mt-5 d-n" style="height: fit-content;">
+                                <h4>សៀវភៅ​ដែលកំពុងពេញនិយម</h4>
+                                <hr class="mb-4">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="row g-3 ">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/The Priory of the Orange Tree.png" height="150px" style="object-fit: cover;"  class="card-img " style="" alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">The Priory of the Orange Tree</h6>
+                                                    <p class="card-text text">ប្រលោមលោកបរទេស</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/pkaSropun.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">រឿងផ្កាស្រពោន</h6>
+                                                    <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/lord-of-the-ring.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">The Lord Of the Ring</h6>
+                                                    <p class="card-text text">ប្រលោមលោកបរទេស</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/kolapPailen.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">រឿងកុលាបប៉ៃលិន</h6>
+                                                    <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="row g-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/kompulVIsal.png" height="150px" style="object-fit: cover;"  class="card-img " style="" alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">រឿង​ កំពូលវិសាល</h6>
+                                                    <p class="card-text text">រឿងនិទានខ្មែរ</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/tepAakSor.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">រឿងទេពអប្សរតូច</h6>
+                                                    <p class="card-text text">រឿងនិទានខ្មែរ</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/sophat.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">រឿង​ សុផាត</h6>
+                                                    <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/tomTeav.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">រឿង ទុំទាវ</h6>
+                                                    <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="row g-3">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/harry-P1.png" height="150px" style="object-fit: cover;"  class="card-img " style="" alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">Harry Potter and the Philosopher's Stone</h6>
+                                                    <p class="card-text text">ប្រលោមលោកបរទេស</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/harry-p2.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">Harry Potter and the Chamber of Secrets</h6>
+                                                    <p class="card-text text">ប្រលោមលោកបរទេស</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/harry-p3.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">Harry Potter and the Prisoner of Azkaban: Large Print Edition</h6>
+                                                    <p class="card-text text">ប្រលោមលោកបរទេស</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class=" card border-0">
+                                                <img src="assets/img/book/harry-p4.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <div class="card-body">
+                                                    <h6 class="card-title text">Harry Potter and the Order of the Phoenix</h6>
+                                                    <p class="card-text text">ប្រលោមលោកបរទេស</p>
+                                                </div>
+                                                <div class=" card-footer no-bg d-flex justify-content-between">
+                                                    <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                    <button  class="btn border-0 text-warning toggleButton">
+                                                        <i class="fa-light fa-heart"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> 
+
+                        <div class="row mt-5 g-lg-1 g-2">
+                            <h4>សៀវភៅ​ដែលបានបញ្ចូលថ្មីៗ</h4>
+                            <hr>
+                            <div class="d-flex justify-content-end pb-3">
+                                <a href="#" class="text-decoration-none  hover-text text-body" style="font-size: 14px; font-weight: 400;">មើលបន្ថែមទៀត</a>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class=" card border-0 p-2">
+                                    <div class="d-flex">
+                                        <img src="assets/img/book/A-cruel-thirst.png"  height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                        <div class="ms-3">
+                                            <h6 class="card-title">
+                                                A Cruel Thirst
+                                            </h6>
+                                            <p class=" text2" style="font-size: 12px;">LA fledgling vampire and a headstrong vemp huntress must work together Lorem, ipsum Lorem, ipsum dolor..</p>
+                                            <div class="d-flex justify-content-between px-2">
+                                                <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                <p  class="text-warning align-items-center" style="font-size: 12px;">
+                                                    1 ម៉ោងមុន
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                                <div class=" card border-0 p-2">
+                                    <div class="d-flex">
+                                        <img src="assets/img/book/the-thinker-d.png" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                        <div class="ms-3">
+                                            <h6 class="card-title">
+                                                The Tinker’s Daughter
+                                            </h6>
+                                            <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
+                                            <div class="d-flex justify-content-between px-2">
+                                                <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                                <p  class="text-warning align-items-center" style="font-size: 12px;">
+                                                    1 ថ្ងៃមុន
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                        </div>
+
+                    </div>
+                </div>
+                    <div class="col-lg-5">
+                        <div class="swiper mySwiper pt-5 d-n" style="height: fit-content;">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="row">
+                                    <div class=" col-md-6">
+                                        <div class="card border-0">
+                                            <img src="https://image.winudf.com/v2/image/Y29tLndLYWxlb3BQYWlsaW5fNzY2NjgwOV9zY3JlZW5fNF8xNTM0NDM0MDExXzA5MA/screen-4.webp?fakeurl=1&type=.webp" class=" card-image book-star" alt="book">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class=" col-md-6">
+                                        <div class="card blur-bg border-0" style="background-color: var(--low-bg);">
+                                            <div class=" card-body">
+                                                <h6 class="card-title text-center text-warning">រឿងផ្កាស្រពោន</h6>
+                                                <p class=" text-warning">⁜ និពន្ធដោយ  លោក​នូហាច</p>
+                                                <p>រឿងផ្កាស្រពោនជាអក្សរសិល្ប៍ទំនើប បែបប្រលោមលោកមនោសញ្ចេតនាស្នេហា។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                            </div>
+                                            <div class=" card-footer">
+                                                <p class=" text text-warning">ទទួលបានការចាប់អារម្មណ៍ជាងគេ!</p>
+                                                <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="swiper-slide">
+                                <div class="row">
+                                    <div class=" col-md-6">
+                                        <div class="card border-0">
+                                            <img src="https://image.winudf.com/v2/image/Y29tLndLYWxlb3BQYWlsaW5fNzY2NjgwOV9zY3JlZW5fMl8xNTM0NDM0MDA5XzAzMg/screen-2.webp?fakeurl=1&type=.webp" class=" card-image book-star" alt="book">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class=" col-md-6">
+                                        <div class="card blur-bg border-0" style="background-color: var(--low-bg);">
+                                            <div class=" card-body">
+                                                <h6 class="card-title text-center text-warning">រឿងកុលាបប៉ៃលិន</h6>
+                                                <p class=" text-warning">⁜ និពន្ធដោយ ញ៉ុក ថែម</p>
+                                                <p>រឿងផ្កាស្រពោនជាអក្សរសិល្ប៍ទំនើប បែបប្រលោមលោកមនោសញ្ចេតនាស្នេហា។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                            </div>
+                                            <div class=" card-footer">
+                                                <p class=" text text-warning">ទទួលបានការចាប់អារម្មណ៍ជាងគេ!</p>
+                                                <button class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>                        
+
+
+                          <div id="carouselExampleIndicators" class="carousel slide mt-md-0 mt-5 mb-5 mb-md-2 mb-lg-0 ms-lg-5">
+                            <h4>អ្នកនិពន្ធប្រចាំថ្ងៃ</h4>
+                            <hr class=" mb-4">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <div class=" row g-3">
+                                    <div class=" col-md-6">
+                                        <div class="card border-0 no-bg">
+                                            <img src="./assets/img/avata/avatar-6.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <div class=" card-body mt-3 rounded-3 border-warning-style">
+                                                <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
+                                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                                <button class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out">មើលស្នាដៃ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                        <div class="card border-0 no-bg">
+                                            <img src="./assets/img/avata/avatar-3.jpg" class=" rounded-circle mx-auto " style="width: 70px; object-fit: cover;" alt="">
+                                            <div class=" card-body  mt-3 rounded-3 border-warning-style">
+                                                <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
+                                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                                <button class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out">មើលស្នាដៃ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class=" row g-3">
+                                    <div class=" col-md-6">
+                                        <div class="card border-0 no-bg">
+                                            <img src="./assets/img/avata/avatar-2.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <div class=" card-body mt-3 rounded-3 border-warning-style">
+                                                <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
+                                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                                <button class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out">មើលស្នាដៃ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                        <div class="card border-0 no-bg">
+                                            <img src="./assets/img/avata/avatar-1.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <div class=" card-body  mt-3 rounded-3 border-warning-style">
+                                                <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
+                                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                                <button class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out">មើលស្នាដៃ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <div class=" row g-3">
+                                    <div class=" col-md-6">
+                                        <div class="card border-0 no-bg">
+                                            <img src="./assets/img/avatar-5.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <div class=" card-body mt-3 rounded-3 border-warning-style">
+                                                <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
+                                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                                <button class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out">មើលស្នាដៃ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-md-6">
+                                        <div class="card border-0 no-bg">
+                                            <img src="./assets/img/avata/avatar-4.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <div class=" card-body  mt-3 rounded-3 border-warning-style">
+                                                <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
+                                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                                <div class="d-flex align-items-center text-warning gap-1">
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star text-warning'></i>
+                                                    <i class='bx bxs-star-half text-warning'></i>
+                                                    4.9
+                                                </div>
+                                                <button class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out">មើលស្នាដៃ</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+            </div>
+         </div>
+
+        </section>
+        <section class=" statice-value ">
+            <div class="container">
+                <div class="row g-3 p-md-5 mt-n3" >
+                    <div class=" col-lg-3 col-6">
+                        <div class="card text-warning rounded-4 border-0 box-shadow-3d">
+                            <i class="fa-thin fa-books text-center pt-5" style=" font-size: 4rem"></i>
+                            <div class="card-body">
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <div class=" mt-2 fs-3 counter" data-countto="20000" data-duration="3000">
+                                    0
+                                    </div>
+                                    <p class="fs-3 mt-2">សៀវភៅ​</p>
+                                </div>                                
+                            </div>
+                                
+                        </div>
+                    </div>
+                    <div class=" col-lg-3 col-6">
+                        <div class="card text-warning rounded-4 border-0 box-shadow-3d">
+                            <i class="fa-thin fa-users-between-lines text-center pt-5" style=" font-size: 4rem"></i>
+                            <div class="card-body">
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <div class=" mt-2 fs-3 counter" data-countto="56000" data-duration="3000">
+                                    0
+                                    </div>
+                                    <p class="fs-3 mt-2">អ្នកអាន</p>
+                                </div>
+                            </div>
+                           
+                    </div>
+                    </div>
+                    <div class=" col-lg-3 col-6">
+                        <div class="card text-warning rounded-4 border-0 box-shadow-3d">
+                            <i class="fa-light fa-monitor-waveform text-center pt-5" style=" font-size: 4rem"></i>
+                            <div class=" card-body">
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <div class=" mt-2 fs-3 counter" data-countto="12000" data-duration="3000">
+                                    0
+                                    </div>
+                                    <p class="fs-3 mt-2">មតិ</p>
+                                </div>
+                            </div>
+
+                    </div>
+                    </div>
+                
+                    <div class=" col-lg-3 col-6">
+                        <div class="card text-warning rounded-4 border-0 box-shadow-3d">
+                            <i class="fa-light fa-user-pen text-center pt-5" style=" font-size: 4rem;"></i>
+                            <div class="card-body">
+                                <div class="d-flex gap-2 justify-content-center">
+                                    <div class=" mt-2 fs-3 counter" data-countto="200" data-duration="3000">
+                                    0
+                                    </div>
+                                    <p class="fs-3 mt-2">អ្នកនិពន្ធ</p>
+                                </div>
+                            </div>
+                           
+                    </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
+        <div class="container">
+            <div class=" row pt-5 p-md-5 ">
+                <div class=" col-lg-5">
+                    <img src="./assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
+                        <div class=" card-body  mt-3">
+                        <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
+                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">link បន្ថែម</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0 " style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ជំនួយ</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">Help and Support</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Become Author</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Get the app</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Tutorial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <button class=" btn btn-warning rounded-circle z-3 position-fixed hvr-ripple-out2" id="backToTop"><i class="fa-duotone fa-solid fa-up-from-line fs-2 text-body"></i></button>
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ទំនាក់ទំនង</h4>
+                            <p>54 St 606, Phnom Penh</p>
+                            <div class=" d-flex gap-2">
+                                <p>Email:</p>
+                                <a href="#">khanshaRead@gmail.com</a>
+                            </div>
+                            <div class=" d-flex">
+                                <p>Phone:</p>
+                                <p class=" fw-bold " style="font-size: 14px;">(855) 089 / 081 168168</p>
+                            </div>
+                            <div class=" d-flex">
+                                <a href="">
+                                    <a href="#"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/appstore.svg"
+                                        alt="" class="img-fluid" /></a>
+                                <a href="#" class="ms-2"><img
+                                        src="https://geeksui.codescandy.com/geeks/assets/images/svg/playstore.svg" alt=""
+                                        class="img-fluid" /></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-0  py-2 mt-5" style="border-top: var(--border-top);">
+                    
+                    <div class="col-lg-10 col-12">
+                        <div class="d-lg-flex align-items-center">
+                            <div class="me-4">
+                                <span>© 2024 khanshaRead.com</span>
+                            </div>
+                            <div>
+                                <nav class="nav nav-footer ">
+                                    <a class="nav-link ps-0 text-body hover-text" href="#">Privacy Policy</a>
+                                    <a class="nav-link px-2 px-md-3 text-body hover-text" href="#">Cookie Notice </a>
+                                    <a class="nav-link text-body hover-text" href="#">Terms of Use</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+</body>
+ <!-- link js bootstrap  -->
+ <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/js/theme.js"></script>
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="assets/js/swipper.js"></script>
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+ <script src="assets/js/animate.js"></script>
+</html>
