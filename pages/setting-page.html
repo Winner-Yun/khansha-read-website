@@ -18,6 +18,7 @@
     <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/show-book.css">
     <link rel="stylesheet" href="../assets/css/sell-book.css">
+    <link rel="stylesheet" href="../assets/css/setting.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
     <style>
@@ -316,8 +317,8 @@
                                                 <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="120" height="120">
                                             </div>
                                             <div class="d-flex mt-3 gap-2 justify-content-end">
-                                                <button class="btn border rounded-5">ផ្លាស់ប្តូររូបភាព</button>
-                                                <button class="btn border rounded-circle"><i class="fa-light fa-trash"></i></button>
+                                                <button class="btn border rounded-5 btn-hover">ផ្លាស់ប្តូររូបភាព</button>
+                                                <button class="btn border rounded-circle btn-hover"><i class="fa-light fa-trash"></i></button>
                                             </div>
                                         </div>
                                     </div>
@@ -338,14 +339,7 @@
                                     <label class="form-label">អុីម៉ែល</label>
                                     <div class="d-flex gap-2">
                                         <input type="email" class="form-control" value="winner@gmail.com" readonly>
-                                        <button class="btn  w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរពាក្យអុីម៉ែល</button>
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">ពាក្យសំងាត់</label>
-                                    <div class="d-flex gap-2">
-                                        <input type="password" class="form-control" value="023042802" readonly>
-                                        <button class="btn w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរពាក្យសំងាត់</button>
+                                        <button class="btn  w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរអុីម៉ែល</button>
                                     </div>
                                 </div>
                             </form>
@@ -357,8 +351,8 @@
                                 <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="120" height="120">
                             </div>
                             <div class="d-flex mt-3 gap-2 justify-content-center">
-                                <button class="btn border rounded-5">ផ្លាស់ប្តូររូបភាព</button>
-                                <button class="btn border rounded-circle"><i class="fa-light fa-trash"></i></button>
+                                <button class="btn border rounded-5 btn-hover">ផ្លាស់ប្តូររូបភាព</button>
+                                <button class="btn border rounded-circle btn-hover"><i class="fa-light fa-trash"></i></button>
                             </div>
                         </div>
                     </div>
@@ -399,7 +393,7 @@
         <section class="container mt-5">
             <div class="card border-0 no-bg">
                 <h6 class="card-title">ការកំណត់លើវេបសាយ</h6>
-                <p class="card-text opacity-50 mt-3">អ្នកអាចកំណត់ ឬ កែរប្រែមុខងារផ្សេងៗរបស់យើង។</p>
+                <p class="card-text opacity-50 mt-3">អ្នកអាចកំណត់ ឬ កែរប្រែមុខងារផ្សេងៗរបស់វេបសាយរបស់យើង។</p>
             </div>
         
             <div class="card border-0 no-bg pt-4">
@@ -407,8 +401,7 @@
                     <div class="col-lg-12">
                         <div class="list-group">
                             
-                            <!-- 📢 Notifications -->
-                            <h6 class="mt-3">📢 ការជូនដំណឹង</h6>
+                            <h6 class="mt-3 mb-3"><i class="fa-light fa-bell"></i> ការជូនដំណឹង</h6>
                             <div class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>បិទដំណើរការការជូនដំណឹង</span>
                                 <div class="form-check form-switch">
@@ -428,8 +421,7 @@
                                 </div>
                             </div>
         
-                            <!-- 📖 Reading Preferences -->
-                            <h6 class="mt-4">📖 ជម្រើសអាន</h6>
+                            <h6 class="mt-4 mb-3"><i class="fa-light fa-gear"></i> ការកំណត់លើទូទៅ</h6>
                             <div class="list-group-item">
                                 <label for="language" class="form-label">ជ្រើសរើសភាសា</label>
                                 <select class="form-select" id="language">
@@ -441,46 +433,28 @@
                             <div class="list-group-item">
                                 <label class="form-label">របៀបផ្ទុក</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="mode" id="lightMode" checked>
-                                    <label class="form-check-label" for="lightMode">Light Mode</label>
+                                    <input class="form-check-input" type="radio" name="mode" id="lightMode" value="light">
+                                    <label class="form-check-label" for="lightMode">                 
+                                        ភ្លឺ
+                                    </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="mode" id="darkMode">
-                                    <label class="form-check-label" for="darkMode">Dark Mode</label>
+                                    <input class="form-check-input" type="radio" name="mode" id="darkMode" value="dark">
+                                    <label class="form-check-label" for="darkMode">
+                                        ងងឹត
+                                    </label>
+                                </div>                                                               
                                 </div>
-                            </div>
-                            <div class="list-group-item">
-                                <label for="fontSize" class="form-label">ទំហំអក្សរ</label>
-                                <select class="form-select" id="fontSize">
-                                    <option value="small">តូច</option>
-                                    <option value="medium" selected>មធ្យម</option>
-                                    <option value="large">ធំ</option>
-                                </select>
-                            </div>
-                            <div class="list-group-item">
-                                <label class="form-label">របៀបអាន</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="readingMode" id="dayMode" checked>
-                                    <label class="form-check-label" for="dayMode">ថ្ងៃ</label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="readingMode" id="nightMode">
-                                    <label class="form-check-label" for="nightMode">យប់</label>
-                                </div>
-                            </div>
-                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                <span>រក្សាទុកទីតាំងអានដោយស្វ័យប្រវត្តិ</span>
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" checked>
-                                </div>
-                            </div>
         
-                            <h6 class="mt-4">🔒 ភាពឯកជន & សន្តិសុខ</h6>
-                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                <span>បិទការចែករំលែកបញ្ជីបំណង</span>
+                            <h6 class="mt-4 mb-3"><i class="fa-light fa-lock"></i> ភាពឯកជន & សន្តិសុខ</h6>
+                            <div class=" list-group-item d-flex justify-content-between align-items-center">
+                                <span>បើកដំណើរការ​ Private account</span>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox">
                                 </div>
+                            </div>
+                            <div class="d-flex justify-content-end my-3">
+                                *អ្នកអាចបញ្ចេញមតិដោយអ្នកដ៏ទៃមិនអាចមើល ពត៏មានប្រូហ្វាល់របស់អ្នកបានទេ
                             </div>
                             <div class="list-group-item d-flex justify-content-between align-items-center">
                                 <span>បិទការណែនាំសៀវភៅ</span>
@@ -488,10 +462,32 @@
                                     <input class="form-check-input" type="checkbox" checked>
                                 </div>
                             </div>
+                            <div class="list-group-item">
+                                <form action="">
+                                    <div class="mb-3">
+                                        <label class="form-label">ផ្លាស់ប្តូរពាក្យសំងាត់</label>
+                                        <div class="row g-3">
+                                            <div class=" col-lg-3">
+                                                <div class="card no-bg border-0">
+                                                    <input type="password" class="form-control" value="023042802" readonly>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class=" col-lg-3">
+                                                <div class=" card no-bg border-0">
+                                                    <button class="btn w-50 btn-primary">ផ្លាស់ប្តូរពាក្យសំងាត់</button>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
         
-                            <!-- 📥 Download Settings -->
-                            <h6 class="mt-4">📥 ការទាញយក</h6>
-                            <div class="list-group-item border-0">
+
+                            <h6 class="mt-4 mb-3"><i class="fa-light fa-cloud-arrow-down"></i> ការទាញយក</h6>
+                            <div class="list-group-item ">
                                 <label for="downloadFormat" class="form-label">ទ្រង់ទ្រាយសៀវភៅដែលចូលចិត្ត</label>
                                 <select class="form-select" id="downloadFormat">
                                     <option value="pdf">PDF</option>
@@ -499,10 +495,9 @@
                                     <option value="mobi">MOBI</option>
                                 </select>
                             </div>
-                            
-                        </div>
-                        <div class="list-group-item pt-3 d-flex justify-content-end text-center">
-                            <button type="submit" class="btn btn-primary">រក្សាទុកការកំណត់</button>
+                            <div class="list-group-item pt-3 d-flex justify-content-end text-center">
+                                <button type="submit" class="btn btn-primary">រក្សាទុកការកំណត់</button>
+                            </div>    
                         </div>
                     </div>
                 </div>
@@ -607,5 +602,6 @@
  <script src="../assets/js/swipper.js"></script>
  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
  <script src="../assets/js/animate.js"></script>
+ <script src="../assets/js/setting-dark-light-mode.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
 </html>
