@@ -9,3 +9,67 @@
    background-color: rgb(255, 0, 0) !important;
    border: solid 1px rgb(255, 0, 0) !important;
 }
+
+@keyframes progress75 {
+   from {
+       width: 0%;
+       background-color: red;
+   }
+   30% {
+       background-color: red;
+   }
+   60% {
+       background-color: green;
+   }
+   to {
+       width: 75%;
+       background-color: blue;
+   }
+}
+
+@keyframes progress50 {
+   from {
+       width: 0%;
+       background-color: red;
+   }
+   30% {
+       background-color: red;
+   }
+   60% {
+       background-color: green;
+   }
+   to {
+       width: 50%;
+       background-color: green;
+   }
+}
+
+@keyframes progress30 {
+   from {
+       width: 0%;
+       background-color: red;
+   }
+   30% {
+       background-color: red;
+   }
+   to {
+       width: 30%;
+       background-color: red;
+   }
+}
+
+/* Apply the animations with fill mode to retain final color */
+#progressBar1 {
+   animation: progress75 3s ease-in-out forwards;
+   animation-fill-mode: forwards;
+}
+
+#progressBar2 {
+   animation: progress50 3s ease-in-out forwards;
+   animation-fill-mode: forwards;
+}
+
+#progressBar3 {
+   animation: progress30 3s ease-in-out forwards;
+   animation-fill-mode: forwards;
+}

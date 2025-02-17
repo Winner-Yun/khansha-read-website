@@ -187,18 +187,23 @@
             <div class="offcanvas-body pt-5">
                     <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                            <a href="../index.html" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
                                 <i class='bx bx-home-alt'></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="show-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-book"></i>
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a href="sell-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="fa-light fa-basket-shopping"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
-                                <i class="bi bi-clock-history"></i>
+                                <i class="fa-light fa-cart-arrow-down"></i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -228,18 +233,23 @@
                     <div>
                         <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                <a href="../index.html" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
                                     <i class='bx bx-home-alt'></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="show-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="bi bi-book"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a href="sell-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-basket-shopping"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
-                                    <i class="bi bi-clock-history"></i>
+                                    <i class="fa-light fa-cart-arrow-down"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -298,10 +308,10 @@
     </div>
     
     <main>
-        <section class="profile-info mt-5">
+        <section class="profile-info mt-lg-5 mt-3">
             <div class="container">
                 <div class="row g-3">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 d-none d-lg-block">
                         <div class="card border-0 no-bg">
                             <h6 class="card-title">ប្រវត្តិរូបរបស់អ្នក</h6>
                             <p class="card-text opacity-50 mt-3">អ្នកអាចកែប្រែ ឬ កែ​សម្រួលប្រវិត្តរូបរបស់លោកអ្នកបាន។</p>
@@ -313,10 +323,10 @@
                                 <div class="row g-3">
                                     <div class="col-lg-2 text-center d-block d-lg-none">
                                         <div class="card border-0 no-bg">
-                                            <div class="d-flex justify-content-end">
-                                                <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="120" height="120">
+                                            <div class="d-flex justify-content-start">
+                                                <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="100" height="100">
                                             </div>
-                                            <div class="d-flex mt-3 gap-2 justify-content-end">
+                                            <div class="d-flex mt-3 gap-2 justify-content-start">
                                                 <button class="btn border rounded-5 btn-hover">ផ្លាស់ប្តូររូបភាព</button>
                                                 <button class="btn border rounded-circle btn-hover"><i class="fa-light fa-trash"></i></button>
                                             </div>
@@ -361,20 +371,26 @@
             </div>
         </section>
         
-        <section class="container mt-5">
+        <section class="container mt-lg-5 mt-3">
             <div class="card border-0 no-bg">
                 <h6 class="card-title">ស្ថិតិការចំណាយលើសៀវភៅ</h6>
                 <p class="card-text opacity-50 mt-3">តាមដានចំណាយក្នុងការទិញសៀវភៅ។</p>
             </div>
             <div class="card border-0 no-bg pt-4">
                 <div class="progress mb-3">
-                    <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                    <div class="progress-bar animated-bar" id="progressBar1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <span id="progressPercent1">0%</span>
+                    </div>
                 </div>
                 <div class="progress mb-3">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                    <div class="progress-bar animated-bar" id="progressBar2" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <span id="progressPercent2">0%</span>
+                    </div>
                 </div>
                 <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
+                    <div class="progress-bar animated-bar" id="progressBar3" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                        <span id="progressPercent3">0%</span>
+                    </div>
                 </div>
                 <div class="mt-3">
                     <div class="d-flex align-items-center">
@@ -604,4 +620,5 @@
  <script src="../assets/js/animate.js"></script>
  <script src="../assets/js/setting-dark-light-mode.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
+ <script src="../assets/js/count-bar.js"></script>
 </html>

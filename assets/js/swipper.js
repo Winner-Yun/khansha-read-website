@@ -35,7 +35,14 @@
   document.addEventListener("DOMContentLoaded", function () {
     let carousel = document.querySelector("#carouselExampleIndicators");
     let bootstrapCarousel = new bootstrap.Carousel(carousel, {
-        interval: 5000, 
+        interval: 3000, 
+        ride: "carousel" // Automatically cycle through slides
+    });
+});
+  document.addEventListener("DOMContentLoaded", function () {
+    let carousel = document.querySelector("#carouselExampleIndicators2");
+    let bootstrapCarousel = new bootstrap.Carousel(carousel, {
+        interval: 3000, 
         ride: "carousel" // Automatically cycle through slides
     });
 });
