@@ -1,0 +1,38 @@
+@keyframes progress50 {
+    from {
+        width: 0%;
+    }
+    30% {
+    }
+    to {
+        width: 50%;
+    }
+ }
+ 
+ /* Apply the animations with fill mode to retain final color */
+ #progressBar1 {
+    animation: progress50 3s ease-in-out forwards;
+    animation-fill-mode: forwards;
+ }
+
+.cart-table th, .cart-table td {
+    vertical-align: middle;
+}
+
+.quantity-btn {
+    align-items: center;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+.remove-btn {
+    cursor: pointer;
+}
+
+.checkout-container {
+    margin-top: 20px;
+    text-align: right;
+}
+

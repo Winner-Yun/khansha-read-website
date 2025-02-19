@@ -191,6 +191,9 @@ input[type="search"]::-webkit-search-cancel-button {
     opacity: 0;
   }
 }
+.btn-warning{
+  background-color: rgb(255, 193, 7) !important;
+}
 .hvr-ripple-out {
   display: inline-block;
   vertical-align: middle;
@@ -202,7 +205,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .hvr-ripple-out:before {
   content: "";
   position: absolute;
-  border: rgb(255, 190, 26) solid 6px;
+  border: rgb(255, 193, 2) solid 5px;
   border-radius: 10px !important;
   top: 0;
   right: 0;
@@ -228,7 +231,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .hvr-ripple-out2:before {
   content: "";
   position: absolute;
-  border: rgb(255, 190, 26) solid 6px;
+  border: rgb(255, 193, 7) solid 6px;
   border-radius: 50px !important;
   top: 0;
   right: 0;
@@ -356,4 +359,50 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 
+
+/*cart- hover style rare*/
+.hover-active {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.hover-active:hover{
+  scale: 1.05;
+}
+
+.hover-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 183, 0);
+  transition: width 0.3s ease;
+}
+
+.hover-active:hover::after {
+  width: 100%;
+}
+
+.card-hover-ef .hover-active ~ div {
+  position: relative;
+}
+.card-hover-ef .hover-active ~ div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgb(255, 183, 0);
+  transition: width 0.3s ease;
+}
+
+/* Ensure transition applies */
+.card-hover-ef .hover-active:hover ~ div::after {
+  width: 100%;
+}
 

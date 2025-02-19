@@ -39,7 +39,7 @@
         <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
             <div class="container">
                 <div>
-                    <a href="/" class="navbar-brand text-decoration-none text-center">
+                    <a href="../index.html" class="navbar-brand text-decoration-none text-center">
                         <div class="d-flex mt-4 gap-2">
                             <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
                             <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
@@ -192,22 +192,27 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
+                            <a href="show-book.html" class="nav-link nav-link-hover hvr-float-shadow active-style">
                                 <i class="bi bi-book"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
-                                <i class="bi bi-clock-history"></i>
+                                <i class="fa-light fa-basket-shopping"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="cart-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="fa-light fa-cart-arrow-down"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="save-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-bookmark"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="setting-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-gear"></i>
                             </a>
                         </li>
@@ -233,22 +238,27 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
+                                <a href="show-book.html" class="nav-link nav-link-hover hvr-float-shadow active-style">
                                     <i class="bi bi-book"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
-                                    <i class="bi bi-clock-history"></i>
+                                <a href="sell-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-basket-shopping"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="cart-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-cart-arrow-down"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="save-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="bi bi-bookmark"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="setting-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="bi bi-gear"></i>
                                 </a>
                             </li>
@@ -354,50 +364,12 @@
         
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="documentModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-fullscreen">
-              <div class="modal-content" style="min-height: 40rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+              <div class="modal-content bg-blur" style="min-height: 40rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
           
-                <div class="modal-header d-flex justify-content-between align-items-center text-body" style="border-bottom: none; padding: 20px 30px; background: var(--theme-bg); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
-                  <div class="header-title">
-                    <h4 class="modal-title text-warning fw-medium" id="documentModalLabel">ប្រវត្តិសាស្រ្តនៃកម្ពុជា</h4>
-                    <p style=" margin-bottom: 0;">
-                        ដំណើរឆ្លងកាត់ប្រវត្តិសាស្រ្តដ៏សម្បូរបែប និងផ្លាស់ប្តូររបស់កម្ពុជា។
-                    </p>
-                    <div class=" d-none d-md-block">
-                        <div>
-                            <span><strong class="text-warning fw-medium">អ្នកនិពន្ធ:</strong> John Doe</span> &nbsp;|&nbsp;
-                            <span><strong class="text-warning fw-medium">បានបង្ហោះ:</strong> 2025</span>
-                          </div>
-                          <div>
-                              <span><strong class="text-warning fw-medium">ប្រភេទរឿង:</strong> ប្រវត្តិសាស្រ្ត</span> &nbsp;|&nbsp;
-                              <span><strong class="text-warning fw-medium">អ្នកបង្ហោះ:</strong> គេនស្យា​ រីឌ</span>
-                          </div>
-                    </div>
-                    
+                <div class="modal-header d-flex  align-items-center bg-blur text-body" style="border-bottom: none; padding: 20px 30px; background: var(--theme-bg); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
 
-                    <div class=" d-block d-md-none">
-                        <div>
-                            <span><strong class="text-warning fw-medium">អ្នកនិពន្ធ:</strong> John Doe</span>
-                            
-                          </div>
-                        <div>
-                            <span><strong class="text-warning fw-medium">បានបង្ហោះ:</strong> 2025</span>
-                            
-                          </div>
-                        <div>
-                            <span><strong class="text-warning fw-medium">ប្រភេទរឿង:</strong> ប្រវត្តិសាស្រ្ត</span>
-                            
-                          </div>
-                        <div>
-                            <span><strong class="text-warning fw-medium">អ្នកបង្ហោះ:</strong> គេនស្យា​ រីឌ</span>  
-                          </div>
-                       
-                          
-                    </div>
-                    
-                  </div>
-
-                  <button type="button" class="btn btn-warning hvr-ripple-out rounded-3 btn-lg text-light" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-arrow-left"></i>
+                  <button type="button" class="btn btn-sm btn-warning hvr-ripple-out rounded-3 btn-lg text-light" style="width: 50px;" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-arrow-left animate"></i>
                   </button>
                 </div>
           
@@ -406,7 +378,7 @@
                         <iframe src="https://drive.google.com/file/d/1kJfG20-WODrwv5qr1IoyPfsm80ZD_PyU/preview"  style="width: 100%; height: 100%;" type="application/pdf"></iframe>
                     </div>
                 </div>
-                <div class="modal-footer justify-content-between">
+                <div class="modal-footer border-0 justify-content-between">
                     <img src="../assets/img/khanSha.png" width="50px" alt="">
                     <a class="pe-2 text-warning no-bg  " href="https://drive.google.com/file/d/1kJfG20-WODrwv5qr1IoyPfsm80ZD_PyU/view" target="_blank">
                         បើក PDF នេះក្នុង Google Drive 
@@ -499,7 +471,7 @@
                     <img src="../assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
                         <div class=" card-body  mt-3">
                         <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
-                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន <br>​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
                 </div>
                 </div>
                 <div class=" col-lg-2 col-6">
