@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>khanshaRead</title>
+    <title>setting-page</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- link css bootstrap  -->
     <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
@@ -18,7 +18,7 @@
     <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
     <link rel="stylesheet" href="../assets/css/show-book.css">
     <link rel="stylesheet" href="../assets/css/sell-book.css">
-    <link rel="stylesheet" href="../assets/css/cart-page.css">
+    <link rel="stylesheet" href="../assets/css/setting.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
     <style>
@@ -192,7 +192,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="show-book.html" class="nav-link nav-link-hover hvr-float-shadow  text-body">
+                            <a href="show-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-book"></i>
                             </a>
                         </li>
@@ -202,7 +202,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
+                            <a href="cart-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="fa-light fa-cart-arrow-down"></i>
                             </a>
                         </li>
@@ -212,7 +212,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="setting-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body active-style">
                                 <i class="bi bi-gear"></i>
                             </a>
                         </li>
@@ -248,7 +248,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style"">
+                                <a href="cart-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="fa-light fa-cart-arrow-down"></i>
                                 </a>
                             </li>
@@ -258,7 +258,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="setting-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow active-style">
                                     <i class="bi bi-gear"></i>
                                 </a>
                             </li>
@@ -308,120 +308,220 @@
     </div>
     
     <main>
-        <section>
-            <div class="container mt-4">
-                <h4>ទំនិញរបស់អ្នក:</h4>
-                <div class="p-2 p-lg-5 mt-4 rounded-3" style="background-color: var(--theme-bg);">
-                    <div class="progress" role="progressbar" aria-label="Progress example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar progress-bar-striped" id="progressBar1" style=" background-color: rgb(255, 193, 7);"><span id="progressPercent2">0%</span></div>
+        <section class="profile-info mt-lg-5 mt-3">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-lg-4 d-none d-lg-block">
+                        <div class="card border-0 no-bg">
+                            <h6 class="card-title">ប្រវត្តិរូបរបស់អ្នក</h6>
+                            <p class="card-text opacity-50 mt-3">អ្នកអាចកែប្រែ ឬ កែ​សម្រួលប្រវិត្តរូបរបស់លោកអ្នកបាន។</p>
+                        </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between; margin-top: 10px;">
-                        <span>0៛</span>
-                        <span class=" text-warning">free delivery</span>
-                        <span>បញ្ចុះតម្លៃ5%</span>
-                        <span>100000៛</span>
+                    <div class="col-lg-6">
+                        <div class="card border-0 no-bg">
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-lg-2 text-center d-block d-lg-none">
+                                        <div class="card border-0 no-bg">
+                                            <div class="d-flex justify-content-start">
+                                                <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="100" height="100">
+                                            </div>
+                                            <div class="d-flex mt-3 gap-2 justify-content-start">
+                                                <button class="btn border rounded-5 btn-hover">ផ្លាស់ប្តូររូបភាព</button>
+                                                <button class="btn border rounded-circle btn-hover"><i class="fa-light fa-trash"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">គោត្តនាម</label>
+                                        <input type="text" class="form-control" value="យុន" readonly>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <label class="form-label">នាម</label>
+                                        <input type="text" class="form-control" value="វិនន័រ" readonly>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end gap-2">
+                                    <button class="btn btn-warning text-light hvr-ripple-out">ផ្លាសប្តូរ គោត្តនាម & នាម</button>
+                                    <button class="btn disabled">រក្សាទុក</button>
+                                </div>
+                                <div class="mt-3 mb-3">
+                                    <label class="form-label">អុីម៉ែល</label>
+                                    <div class="d-flex gap-2">
+                                        <input type="email" class="form-control" value="winner@gmail.com" readonly>
+                                        <button class="btn  w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរអុីម៉ែល</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <p class=" text-center mt-3 text-warning">
-                        អស្ចារ្យណាស់! អ្នកទទួលបានការដឹកជញ្ជូនដោយអត់គិតថ្លៃ​ <strong class=" fw-medium">30% ទៀតនឹងទទួកបាន ការបញ្ខុះតម្លៃ​ 5% </strong>
-                    </p>
+                    <div class="col-lg-2 text-center d-none d-lg-block">
+                        <div class="card border-0 no-bg">
+                            <div class="d-flex justify-content-center">
+                                <img src="../assets/img/avata/avatar-5.jpg" class="rounded-circle " width="120" height="120">
+                            </div>
+                            <div class="d-flex mt-3 gap-2 justify-content-center">
+                                <button class="btn border rounded-5 btn-hover">ផ្លាស់ប្តូររូបភាព</button>
+                                <button class="btn border rounded-circle btn-hover"><i class="fa-light fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+                <hr>
+            </div>
+        </section>
+        
+        <section class="container mt-lg-5 mt-3">
+            <div class="card border-0 no-bg">
+                <h6 class="card-title">ស្ថិតិការចំណាយលើសៀវភៅ</h6>
+                <p class="card-text opacity-50 mt-3">តាមដានចំណាយក្នុងការទិញសៀវភៅ។</p>
+            </div>
+            <div class="card border-0 no-bg pt-4">
+                <div class="progress mb-3">
+                    <div class="progress-bar animated-bar" id="progressBar1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <span id="progressPercent1">0%</span>
+                    </div>
+                </div>
+                <div class="progress mb-3">
+                    <div class="progress-bar animated-bar" id="progressBar2" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <span id="progressPercent2">0%</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar animated-bar" id="progressBar3" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                        <span id="progressPercent3">0%</span>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    <div class="d-flex align-items-center">
+                        <span class="badge bg-primary me-2" style="width: 20px; height: 20px; display: inline-block;"></span> 75% - ទិញសៀវភៅថ្មី
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-success me-2" style="width: 20px; height: 20px; display: inline-block;"></span> 50% - ការបញ្ជាទិញកន្លងមក
+                    </div>
+                    <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-danger me-2" style="width: 20px; height: 20px; display: inline-block;"></span> 30% - ការចំណាយផ្សេងៗ
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section>
-            <div class="container cart-container mt-5 p-3 p-lg-4  rounded-3" style="background-color: var(--theme-bg);">
-                <table class="table table-striped cart-table" >
-                    <thead>
-                        <tr>
-                            <th>សៀវភៅ</th>
-                            <th>តម្លៃ</th>
-                            <th>បរិមាណ</th>
-                            <th>សរុប</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr data-price="1">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="../assets/img/book-png/kmgwat.jpg" style="width: 60px;" class="me-2" alt="">
-                                    <p class="d-none d-md-block">រឿង​ ក្មេងវត្ត-new</p>
+        <section class="container mt-5">
+            <div class="card border-0 no-bg">
+                <h6 class="card-title">ការកំណត់លើវេបសាយ</h6>
+                <p class="card-text opacity-50 mt-3">អ្នកអាចកំណត់ ឬ កែរប្រែមុខងារផ្សេងៗរបស់វេបសាយរបស់យើង។</p>
+            </div>
+        
+            <div class="card border-0 no-bg pt-4">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="list-group">
+                            
+                            <h6 class="mt-3 mb-3"><i class="fa-light fa-bell"></i> ការជូនដំណឹង</h6>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទដំណើរការការជូនដំណឹង</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
                                 </div>
-                            </td>
-                            <td>1មុឺន ៛</td>
-                            <td>
-                                <div  class="quantity-btn d-md-flex">
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-sm btn-outline-warning minus-btn mb-1 d-block d-md-none" disabled>-</button>
-                                        <button class="btn btn-sm btn-outline-warning plus-btn mb-1 d-block d-md-none">+</button>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទការបញ្ជូនអុីម៉ែល</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បង្ហាញការបញ្ចុះតម្លៃសៀវភៅ</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+        
+                            <h6 class="mt-4 mb-3"><i class="fa-light fa-gear"></i> ការកំណត់លើទូទៅ</h6>
+                            <div class="list-group-item">
+                                <label for="language" class="form-label">ជ្រើសរើសភាសា</label>
+                                <select class="form-select" id="language">
+                                    <option value="km">ខ្មែរ</option>
+                                    <option value="en">អង់គ្លេស</option>
+                                    <option value="fr">បារាំង</option>
+                                </select>
+                            </div>
+                            <div class="list-group-item">
+                                <label class="form-label">របៀបផ្ទុក</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="lightMode" value="light">
+                                    <label class="form-check-label" for="lightMode">                 
+                                        ភ្លឺ
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="mode" id="darkMode" value="dark">
+                                    <label class="form-check-label" for="darkMode">
+                                        ងងឹត
+                                    </label>
+                                </div>                                                               
+                                </div>
+        
+                            <h6 class="mt-4 mb-3"><i class="fa-light fa-lock"></i> ភាពឯកជន & សន្តិសុខ</h6>
+                            <div class=" list-group-item d-flex justify-content-between align-items-center">
+                                <span>បើកដំណើរការ​ Private account</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end my-3">
+                                *អ្នកអាចបញ្ចេញមតិដោយអ្នកដ៏ទៃមិនអាចមើល ពត៏មានប្រូហ្វាល់របស់អ្នកបានទេ
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>បិទការណែនាំសៀវភៅ</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" checked>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <form action="">
+                                    <div class="mb-3">
+                                        <label class="form-label">ផ្លាស់ប្តូរពាក្យសំងាត់</label>
+                                        <div class="row g-3">
+                                            <div class=" col-lg-3">
+                                                <div class="card no-bg border-0">
+                                                    <input type="password" class="form-control" value="023042802" readonly>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class=" col-lg-3">
+                                                <div class=" card no-bg border-0">
+                                                    <button class="btn w-50 btn-primary">ផ្លាស់ប្តូរពាក្យសំងាត់</button>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
                                     </div>
-                                    <button class="btn btn-sm btn-outline-warning minus-btn2 d-none d-md-block" disabled>-</button>
-                                    <input type="number" value="1" class="form-control mx-2 quantity text-center" style="width: 50px;" readonly>
-                                    <button class="btn btn-sm btn-outline-warning plus-btn2 d-none d-md-block">+</button>
-                                    
-                                </div>
-                            </td>
-                            <td class="total-price">1មុឺន ៛</td>
-                            <td><span class="remove-btn text-danger"><i class="fa-light fa-trash-can"></i></span></td>
-                        </tr>
-                        <tr data-price="1">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="../assets/img/book-png/kompulvisal.jpg" style="width: 60px;" class="me-2" alt="">
-                                    <p class="d-none d-md-block">រឿង កំពូលវិសាល</p>
-                                </div>
-                                
-                            </td>
-                            <td>1មុឺន ៛</td>
-                            <td>
-                                <div  class="quantity-btn d-md-flex">
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-sm btn-outline-warning minus-btn mb-1 d-block d-md-none" disabled>-</button>
-                                        <button class="btn btn-sm btn-outline-warning plus-btn mb-1 d-block d-md-none">+</button>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-warning minus-btn2 d-none d-md-block" disabled>-</button>
-                                    <input type="number" value="1" class="form-control mx-2 quantity text-center" style="width: 50px;" readonly>
-                                    <button class="btn btn-sm btn-outline-warning plus-btn2 d-none d-md-block">+</button>
-                                    
-                                </div>
-                            </td>
-                            <td class="total-price">1មុឺន ៛</td>
-                            <td><span class="remove-btn text-danger "><i class="fa-light fa-trash-can"></i></span></td>
-                        </tr>
-                        <tr data-price="4">
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img src="../assets/img/book-png/horrormlopPor.png" style="width: 60px;" class="me-2" alt="">
-                                    <p class="d-none d-md-block">រឿង ម្លប់ពោធិ បាក់ខែង</p>
-                                </div>
-                            </td>
-                            <td>4មុឺន ៛</td>
-                            <td>
-                                <div  class="quantity-btn d-md-flex">
-                                    <div class="d-flex gap-2">
-                                        <button class="btn btn-sm btn-outline-warning minus-btn mb-1 d-block d-md-none" disabled>-</button>
-                                        <button class="btn btn-sm btn-outline-warning plus-btn mb-1 d-block d-md-none">+</button>
-                                    </div>
-                                    <button class="btn btn-sm btn-outline-warning minus-btn2 d-none d-md-block" disabled>-</button>
-                                    <input type="number" value="1" class="form-control mx-2 quantity text-center" style="width: 50px;" readonly>
-                                    <button class="btn btn-sm btn-outline-warning plus-btn2 d-none d-md-block">+</button>
-                                    
-                                </div>
-                            </td>
-                            <td class="total-price">4មុឺន ៛</td>
-                            <td><span class="remove-btn text-danger"><i class="fa-light fa-trash-can"></i></span></td>
-                        </tr>
-                    </tbody>
-                </table>
-            
-                <div class="checkout-container">
-                    <button class="btn btn-warning text-light hvr-ripple-out">គិតថ្លៃចំណាយ</button>
+                                </form>
+                            </div>
+        
+
+                            <h6 class="mt-4 mb-3"><i class="fa-light fa-cloud-arrow-down"></i> ការទាញយក</h6>
+                            <div class="list-group-item ">
+                                <label for="downloadFormat" class="form-label">ទ្រង់ទ្រាយសៀវភៅដែលចូលចិត្ត</label>
+                                <select class="form-select" id="downloadFormat">
+                                    <option value="pdf">PDF</option>
+                                    <option value="epub" selected>EPUB</option>
+                                    <option value="mobi">MOBI</option>
+                                </select>
+                            </div>
+                            <div class="list-group-item pt-3 d-flex justify-content-end text-center">
+                                <button type="submit" class="btn btn-primary">រក្សាទុកការកំណត់</button>
+                            </div>    
+                        </div>
+                    </div>
                 </div>
-            
-                <div class="empty-cart-msg d-none text-danger text-center">មិនមានទិន្ន័យ!</div>
             </div>
         </section>
+        
+        
+        
     </main>
    
 
@@ -518,7 +618,16 @@
  <script src="../assets/js/swipper.js"></script>
  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
  <script src="../assets/js/animate.js"></script>
+ <script src="../assets/js/setting-dark-light-mode.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
  <script src="../assets/js/count-bar.js"></script>
- <script src="../assets/js/cart-table.js"></script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let scrollPercentage = 44;
+        
+        let scrollPosition = (document.body.scrollHeight - window.innerHeight) * (scrollPercentage / 100);
+        
+        window.scrollTo(0, scrollPosition);
+    });
+</script>
 </html>

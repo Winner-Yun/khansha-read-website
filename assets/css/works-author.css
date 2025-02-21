@@ -1,0 +1,46 @@
+.spikes {
+  position: relative;
+  background: url(https://images2.alphacoders.com/261/26102.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 105%; /* Slightly zoomed for a smooth effect */
+  height: 50vh;
+  animation: moveBackground 8s cubic-bezier(0.42, 0, 0.58, 1) infinite, scaleBackground 8s ease-in-out infinite;
+}
+.spikes-sm {
+  position: relative;
+  background: url(https://images2.alphacoders.com/261/26102.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover; /* Slightly zoomed for a smooth effect */
+  height: 50vh;
+  animation: moveBackground 15s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+@keyframes scaleBackground {
+  0%, 100% {
+    background-size: 105%;
+  }
+  50% {
+    background-size: 110%;
+  }
+}
+
+
+
+.soft-bg{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5px) !important;
+}
