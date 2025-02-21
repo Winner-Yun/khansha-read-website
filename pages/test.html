@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Page</title>
+</head>
+<body>
+  <!-- Google Translate Widget (Hidden with opacity but active) -->
+  <div id="google_translate_element" style="opacity: 0; pointer-events: none;"></div>
+
+  <!-- Your content for the cart page -->
+  <h1>ស្រឡាញអូន</h1>
+  <p>លើសៀវភៅព្រេងនិទាន</p>
+
+  <!-- Your custom language persistence script -->
+  <script type="text/javascript">
+    // Initialize Google Translate widget
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'km'}, 'google_translate_element');
+    }
+
+    // Function to trigger language change in Google Translate
+    function googleTranslateLanguage(lang) {
+      var translateElement = document.querySelector('.goog-te-combo');
+      if (translateElement) {
+        translateElement.value = lang; // Set the value based on selected language
+        translateElement.dispatchEvent(new Event('change')); // Trigger the change event
+      }
+    }
+
+    // Store selected language in localStorage
+    function setLanguagePreference(lang) {
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    // Get the stored language from localStorage
+    function getLanguagePreference() {
+      return localStorage.getItem('preferredLanguage');
+    }
+
+    window.onload = function() {
+      const savedLang = getLanguagePreference();
+      if (savedLang) {
+        googleTranslateLanguage(savedLang); // Apply saved language preference
+      }
+    };
+
+    // Event listener for language dropdown change (if you add the select dropdown)
+    // Make sure this works when a user selects a language
+    document.getElementById('language')?.addEventListener('change', function() {
+      const selectedLanguage = this.value;
+      setLanguagePreference(selectedLanguage); // Save selected language
+      googleTranslateLanguage(selectedLanguage); // Apply selected language
+    });
+  </script>
+
+  <!-- Google Translate Script -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

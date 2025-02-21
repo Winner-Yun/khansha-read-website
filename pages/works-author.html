@@ -309,7 +309,7 @@
     
     <main>
         <section class="inducing-author">
-            <div class="spikes d-none d-lg-block">
+            <div class="spikes d-none d-lg-block position-relative">
                 <div class="container px-3">
                     <div class="row ">
                         <div class="col-lg-4 pt-1">
@@ -333,6 +333,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class=" position-absolute end-0">
+                    <img src="../assets/img/khanSha.png" width="80px" alt="">
                 </div>
             </div>
             <div class="spikes-sm d-none d-md-block d-lg-none">
@@ -373,15 +376,16 @@
                         </div>
                         <div class=" col-9">
                             <div class="card soft-bg text-light p-3 rounded-bottom-5 rounded-top-0">
-                                <h4 class=" card-title text-warning">លោក បុន ធឿន</h4>
-                                <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
-                                <p>⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
-                                <p class="text4">
-                                    លោក បុន ធឿន ជាអ្នកនិពន្ធដែលមានបទពិសោធន៍ច្រើនជាង ៧ ឆ្នាំក្នុងការនិពន្ធ។ គាត់បានបង្កើតស្នាដៃសម័យថ្មីជាច្រើនដែលមានឈ្មោះល្បី។ 
-                                    រឿងរ៉ាវរបស់គាត់មានប្រសិទ្ធភាព និងទាក់ទាញចិត្ត អាចនាំអារម្មណ៍អ្នកអានឱ្យធ្លាក់ចូលក្នុងពិភពនិពន្ធរបស់គាត់។ ជាពិសេស គាត់មានស្នាដៃចំនួន 
-                                    ៦ ដែលបានទទួលការរីករាយយ៉ាងច្រើនពីសំណាក់អ្នកអាន។
-                                </p>
-
+                                <h5 style="font-size: 14px;" class=" card-title text-warning">លោក បុន ធឿន</h5>
+                                <p style="font-size: 12px;">⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
+                                <p style="font-size: 12px;">⁜​​ មានបទពិសោធន៍ ៧ ឆ្នាំលើការនិពន្ធ។</p>
+                                <div class="">
+                                    <p class="text-content" style="font-size: 12px;">
+                                        លោក បុន ធឿន ជាអ្នកនិពន្ធដែលមានបទពិសោធន៍ច្រើនជាង ៧ ឆ្នាំក្នុងការនិពន្ធ។ គាត់បានបង្កើតស្នាដៃសម័យថ្មីជាច្រើនដែលមានឈ្មោះល្បី។ រឿងរ៉ាវរបស់គាត់មានប្រសិទ្ធភាព និងទាក់ទាញចិត្ត អាចនាំអារម្មណ៍អ្នកអានឱ្យធ្លាក់ចូលក្នុងពិភពនិពន្ធរបស់គាត់។ ជាពិសេស គាត់មានស្នាដៃចំនួន ៦ ដែលបានទទួលការរីករាយយ៉ាងច្រើនពីសំណាក់អ្នកអាន។
+                                    </p>
+                                    <a href="#" class="mt-0 text-decoration-none text-light" style="font-size: 12px;" id="toggle" onclick="toggleText(event)">See more <i class="fa-light fa-angle-down"></i></a>
+                                </div>
+                                                            
                             </div>
                         </div>
                     </div>
@@ -943,4 +947,5 @@
  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
  <script src="../assets/js/animate.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
+ <script src="../assets/js/show-all-line-text.js"></script>
 </html>
