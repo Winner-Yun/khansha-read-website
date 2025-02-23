@@ -491,7 +491,9 @@
                                             </div>
                                             <div class=" col-lg-3">
                                                 <div class=" card no-bg border-0">
-                                                    <button class="btn w-50 btn-primary">ផ្លាស់ប្តូរពាក្យសំងាត់</button>
+                                                    <button type="button" class="btn w-50 btn-primary" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                                                        ផ្លាស់ប្តូរពាក្យសំងាត់
+                                                      </button>
                                                 </div>
                                                 
                                             </div>
@@ -521,8 +523,46 @@
         </section>
         
         
-        
+        <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">ប្តូរពាក្យសម្ងាត់</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="passwordForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                      <label for="currentPassword" class="form-label">ពាក្យសម្ងាត់បច្ចុប្បន្ន</label>
+                      <input type="password" class="form-control" id="currentPassword" placeholder="ពាក្យសម្ងាត់បច្ចុប្បន្ន..." required>
+                      <div class="invalid-feedback">
+                        សូមផ្តល់ពាក្យសម្ងាត់បច្ចុប្បន្នរបស់អ្នក។
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="newPassword" class="form-label">ពាក្យសម្ងាត់ថ្មី</label>
+                      <input type="password" class="form-control" id="newPassword" placeholder="ពាក្យសម្ងាត់ថ្មី..." required>
+                      <div class="invalid-feedback">
+                        សូមផ្តល់ពាក្យសម្ងាត់ថ្មី។
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirmPassword" class="form-label">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                      <input type="password" class="form-control" id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់..." required>
+                      <div class="invalid-feedback" id="confirmPasswordError">
+                        សូមបញ្ជាក់ពាក្យសម្ងាត់ថ្មីរបស់អ្នក។
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning text-light hvr-ripple-out">បញ្ញូនប្រតិបត្តការណ៍</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                
     </main>
+
+    
    
 
     <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
@@ -621,4 +661,5 @@
  <script src="../assets/js/setting-dark-light-mode.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
  <script src="../assets/js/count-bar.js"></script>
+ <script src="../assets/js/validation.js"></script>
 </html>
