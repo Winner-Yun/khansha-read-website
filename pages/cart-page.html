@@ -416,9 +416,91 @@
                 </table>
             
                 <div class="checkout-container">
-                    <button class="btn btn-warning text-light hvr-ripple-out">គិតថ្លៃចំណាយ</button>
+                    <button class="btn btn-warning text-light hvr-ripple-out" type="button" data-bs-target="#modal-payment" data-bs-toggle="modal">គិតថ្លៃចំណាយ</button>
                 </div>
-            
+                <div class="modal modal-lg fade" id="modal-payment">
+                    <div class="modal-dialog">
+                        <div class="modal-content rounded-3 shadow-lg">
+                            <div class="modal-header">
+                                <img src="../assets/img/khanSha.png" width="40px" class="rounded-circle me-2" alt="">
+                                <h5 class="modal-title text-warning fw-bold" id="exampleModalLabel">គិតថ្លៃចំណាយ</h5>
+                                <button type="button" class="btn-close " data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body p-4">
+                                <div class="text-center mb-4">
+                                    <h4 class="cart-total-display text-center mt-4 fw-bold"></h4>
+                                    <p class="text-muted">សូមជ្រើសរើសរបៀបក្នុងការបង់ប្រាក់</p>
+                                </div>
+                
+                                <div class="form-group mb-4">
+                                    <label for="payment-method" class="form-label fw-bold">របៀបបង់ប្រាក់:</label>
+                                    <select id="payment-method" class="form-select">
+                                        <option value="qr-code" selected>QR Code</option>
+                                        <option value="bank-transfer">Bank Transfer</option>
+                                        <option value="credit-card">Credit Card</option>
+                                    </select>
+                                </div>
+                
+                                <div id="qr-code-info" class="text-center payment-form">
+                                    <h6 class="fw-bold mb-3">ស្កេន ដើម្បីបង់ប្រាក់</h6>
+                                    <img src="../assets/img/qr.jpg" class="img-fluid rounded shadow-sm" width="350px" alt="">
+                                    <p class="mt-4 text-muted text-start">**បន្ទាប់ពីបង់ការចំណាយរួចរាល់ អ្នកត្រូវវាយលេខវិក្កយប័ត្ររបស់អ្នកដើម្បីផ្ទៀងផ្ទាត់</p>
+                                    <div class="form-group">
+                                        <input type="text" id="qr-payment-id" class="form-control" placeholder="បញ្ចូលលេខវិក្កយប័ត្រ ឧ_: #198023487610986">
+                                    </div>
+                                </div>
+                
+                                <div id="bank-transfer-info" class="payment-form d-none">
+                                    <h6 class="fw-bold mb-3">Bank Transfer Details</h6>
+                                    <p class="text-muted">Please transfer the total amount to the following bank account:</p>
+                                    <p><strong>ឈ្មោះធនាគារ:</strong> ធនាគារ អេសុីលីដា</p>
+                                    <p><strong>លេខ គណនី:</strong> 089 799 876</p>
+                                    <div class="form-group mt-3">
+                                        <label for="bank-payment-id" class="form-label fw-bold">បញ្ចូលលេខវិក្កយប័ត្រ:</label>
+                                        <input type="text" id="bank-payment-id" class="form-control" placeholder="បញ្ចូលលេខវិក្កយប័ត្របន្ទាប់ពីបង់រួច ឧ_: #198023487610986">
+                                    </div>
+                                </div>
+                
+                                <div id="credit-card-form" class="payment-form d-none">
+                                    <h6 class="fw-bold mb-3">Enter Credit Card Information</h6>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Cardholder Name">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Card Number">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Expiry Date (MM/YY)">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="CVV">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="modal-footer justify-content-end">
+                                <button type="button" class="btn btn-warning text-light px-4" data-bs-target="#successModal" data-bs-toggle="modal">បង់ប្រាក់</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="successModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered" >
+                      <div class="modal-content border-0">
+                        <div class="modal-body text-center">
+                            <h2 style="font-size: 4rem;">✅</h2>
+                            <h2 class="text-success">បង់ប្រាក់ជោគជ័យ</h2>
+                            <p class=" text-success">សូមអរគុណ! ការបង់ប្រាក់របស់អ្នកត្រូវបានបញ្ចប់ដោយជោគជ័យ។</p>
+                            <h2 style="font-size: 8rem;" class="emoji">🙏</h2>
+                            <button class=" btn btn-success text-light mt-2" data-bs-dismiss="modal">យល់ព្រម</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                           
                 <div class="empty-cart-msg d-none text-danger text-center">មិនមានទិន្ន័យ!</div>
             </div>
         </section>

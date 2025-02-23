@@ -119,3 +119,47 @@ function checkIfCartIsEmpty() {
 }
 
 updateTotal(); // Call this initially to calculate the total on page load
+
+// Update total cart price with conversion to USD
+function updateTotal() {
+    let totalInRiel = 0;
+    const exchangeRate = 4090; // 1 USD = 4090 Riel
+
+    // Sum all individual item totals in Riel (each 'មុឺន' equals 10,000 Riel)
+    document.querySelectorAll('.total-price').forEach(function (totalPriceCell) {
+        let totalInMun = parseFloat(totalPriceCell.innerText.replace('មុឺន ​៛', '').trim());
+        totalInRiel += totalInMun * 10000; // Convert 'មុឺន' to Riel
+    });
+
+    // Convert to USD
+    let totalInUSD = totalInRiel / exchangeRate;
+
+    // Display the total price in both Riel and USD
+    console.log("Total in Riel: " + totalInRiel.toFixed(2) + "៛");
+    console.log("Total in USD: $" + totalInUSD.toFixed(2));
+
+    // Update the UI to show the total in Riel and USD
+    document.querySelector('.cart-total-display').innerText = 
+        "សរុប: " + totalInRiel.toLocaleString() + "៛ (≈ $" + totalInUSD.toFixed(2) + ")";
+}
+
+// Call updateTotal initially to calculate the total on page load
+updateTotal();
+
+document.getElementById('payment-method').addEventListener('change', function() {
+    var paymentMethod = this.value;
+
+    // Hide all payment forms
+    document.querySelectorAll('.payment-form').forEach(function(form) {
+        form.classList.add('d-none');
+    });
+
+    // Show the selected payment form
+    if (paymentMethod === 'qr-code') {
+        document.getElementById('qr-code-info').classList.remove('d-none');
+    } else if (paymentMethod === 'bank-transfer') {
+        document.getElementById('bank-transfer-info').classList.remove('d-none');
+    } else if (paymentMethod === 'credit-card') {
+        document.getElementById('credit-card-form').classList.remove('d-none');
+    }
+});

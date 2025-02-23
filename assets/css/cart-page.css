@@ -36,3 +36,19 @@
     text-align: right;
 }
 
+
+
+.emoji {
+    font-size: 10rem;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
