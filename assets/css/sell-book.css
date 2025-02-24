@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 [data-bs-theme=light] {
     --theme-bg: #f8f9fa;
 }

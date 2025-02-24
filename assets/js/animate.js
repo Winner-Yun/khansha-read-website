@@ -53,9 +53,21 @@ const observer = new IntersectionObserver((entries) => {
     });
   });
 
+  /*navbar*/
   document.querySelectorAll(".sidebar").forEach((element) => {
     observer.observe(element);
   });
   document.querySelectorAll(".navbar").forEach((element) => {
     observer3.observe(element);
+  });
+  /*index*/
+
+  document.querySelectorAll(".swipper-zoom-in").forEach((element) => {
+    observer5.observe(element);
+  });
+  document.querySelectorAll(".swipper-fade-up").forEach((element) => {
+    observer4.observe(element);
+  });
+  document.querySelectorAll(".swipper-fade-right").forEach((element) => {
+    observer2.observe(element);
   });

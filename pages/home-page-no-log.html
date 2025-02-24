@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>khanshaRead</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <!-- link css bootstrap  -->
-    <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
     <!-- link fontawesome icon  -->
-    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.css">
     <!-- link icon bootstrap  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="icon" href="assets/img/khanSha.png" type="image/x-icon">
+    <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
     <style>
@@ -36,9 +36,9 @@
         <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
             <div class="container">
                 <div>
-                    <a href="index.html" class="navbar-brand text-decoration-none text-center">
+                    <a href="home-page-no-log.html" class="navbar-brand text-decoration-none text-center">
                         <div class="d-flex mt-4 gap-2">
-                            <img src="assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                            <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
                             <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
                                 <span class="position-absolute top-custom start-100 translate-middle badge rounded-pill d-none d-lg-block">
                                     <p class=" text-warning fs-12"> khanshaRead.com</p>
@@ -57,113 +57,17 @@
                 </div>
 
                 <div>
-                    <div class="d-flex gap-1">
-                        <!-- Button to trigger modal -->
+                    <div class="d-flex gap-3">
+ 
                         <button type="button" class="btn btn-link circle-btn nav-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#themeModal">
                             <i class="bi theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
                         </button>
-
-                        <div class=" dropdown mt-1">
-                            <button class="btn border-0 circle-btn align-items-center position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false" >
-                                <i class="fa-regular fa-bell"></i><span class="badge bg-danger rounded-circle position-absolute start-50"
-                                style="font-size: 7px; top: 7px;">4</span></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end dropdwon-width" >
-                                <li class=" d-flex align-items-center">
-                                  <h1 class="dropdown-header fs-5" href="#"> ការជូនដំណឹង</h1>
-                                  <a href="#" class=" ms-auto pe-3"><i class='bx bx-dots-horizontal-rounded text-dark' ></i></a>
-                              </li>
-                                <li><hr class=" dropdown-divider"></li>
-                                
-                                <li>
-                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
-                                      <div>
-                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
-                                      </div>
-                                      
-                                      <div class=" dropdown-item-text">
-                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
-                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
-                                      </div>
-      
-                                      <div class=" my-auto" style=" margin-right: 1rem;">
-                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
-                                      </div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
-                                      <div>
-                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
-                                      </div>
-                                      
-                                      <div class=" dropdown-item-text">
-                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
-                                          <p class="text">បញ្ចុះ​ ២០% លើសៀវភៅព្រេងនិទាន</p>
-                                      </div>
-      
-                                      <div class=" my-auto" style=" margin-right: 1rem;">
-                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
-                                      </div>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
-                                      <div>
-                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
-                                      </div>
-                                      
-                                      <div class=" dropdown-item-text">
-                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
-                                          <p class="text">បានបន្ថែមសៀវភៅ</p>
-                                      </div>
-      
-                                      <div class=" my-auto" style=" margin-right: 1rem;">
-                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
-                                      </div>
-                                  </a>
-                                </li>
-                                <li style="width: 15rem;">
-                                  <a class="d-flex gap-1 ps-3 text-decoration-none" href="#">
-                                      <div>
-                                          <img src="./assets/img/avata/khansha.png" style="height: 40px; object-fit: cover; width: 40px;" class=" rounded-circle" alt="">
-                                      </div>
-                                      
-                                      <div class=" dropdown-item-text">
-                                          <h7 class=" fw-bold text-warning">គេនស្យា​ រីឌ</h7>
-                                          <p class="text"> System បានធ្វើបច្ចុប្បន្នភាព</p>
-                                      </div>
-      
-                                      <div class=" my-auto" style=" margin-right: 1rem;">
-                                          <i class="fa-duotone fa-solid fa-circle fs-6 text-warning"></i>
-                                      </div>
-                                  </a>
-                                </li>
-                                <li><a class="dropdown-item text-center" href="#"> មើលបន្ថែមទៀត</a></li>
-                              </ul>
+                        
+                        <div>
+                            <a href="login-signup.html" class="btn btn-primary text-light fw-bold  btn-sm ">ចូលគណនី</a>
+                            <a href="signup-login.html" class="btn btn-success text-light fw-bold btn-sm">បង្កើតគណនី</a>
                         </div>
-                        
-                        
-                        <div class="dropdown">
-                            <button class=" btn border-0 position-relative" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="assets/img/avatar-5.jpg" alt="profile" width="40px" height="40px" style="object-fit: cover; border-radius: 50%;">
-                                <span class="position-absolute top-100 start-50 translate-middle badge rounded-pill">
-                                    <i class='bx bxs-down-arrow text-warning'></i>
-                                    <span class="visually-hidden">unread messages</span>
-                                  </span>
-                            </button>
-                          
-                            <ul class="dropdown-menu  dropdown-menu-end mt-2">
-                              <li><a class="dropdown-item" href="./pages/setting-page.html"><i class='bx bx-id-card pe-1' ></i>គណនីរបស់អ្នក</a></li>
-                              <li><a class="dropdown-item" href="./pages/setting-page-only-setting.html"><i class='bx bx-cog pe-1'></i>ការកំណត់</a></li>
-                              <li><a class="dropdown-item" href="./pages/home-page-no-log.html"><i class='bx bx-log-out pe-1' ></i>ចាកចេញ</a></li>
-                            </ul>
-                          </div>
-                        
-                        <p class=" mt-auto font-change d-none d-md-block">យុន វិនន័រ</p>
                     </div>
-                    
-                </div>
                 
             </div>
         </nav>
@@ -179,7 +83,7 @@
         
         <div class="offcanvas offcanvas-start" style="width: 80px;" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
             <div class=" offcanvas-header">
-                <img src="assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
             </div>
             <div class="offcanvas-body pt-5">
                     <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
@@ -189,27 +93,27 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./pages/show-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="show-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-book"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./pages/sell-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="sell-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="fa-light fa-basket-shopping"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./pages/cart-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="fa-light fa-cart-arrow-down"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./pages/save-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-bookmark"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./pages/setting-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                 <i class="bi bi-gear"></i>
                             </a>
                         </li>
@@ -235,27 +139,27 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./pages/show-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="show-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="bi bi-book"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./pages/sell-book.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="sell-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="fa-light fa-basket-shopping"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./pages/cart-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="fa-light fa-cart-arrow-down"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./pages/save-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="bi bi-bookmark"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="./pages/setting-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
                                     <i class="bi bi-gear"></i>
                                 </a>
                             </li>
@@ -285,7 +189,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title text-warning fw-light" id="themeModalLabel">
-                        <img src="assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                        <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
                         ជ្រើសរើសពណ៍ផ្ទៃខាងក្រោយ</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
@@ -313,7 +217,7 @@
                             <h4 class="display-6 fw-bold">តោះអានជាមួយ​​ <b class=" text-warning typewriter"></b></h4>
                             <p class="lead">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
                                 ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​...<br><a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
-                            <a href="./pages/show-book.html" class="btn  btn-warning text-light fw-bold btn-lg d-flex align-items-center hvr-ripple-out">
+                            <a href="show-book-no-log.html" class="btn  btn-warning text-light fw-bold btn-lg d-flex align-items-center hvr-ripple-out">
                                 ចាប់ផ្តើមអាន<i class="fa-solid fa-arrow-up-right"></i>
                             </a>
                         </div>
@@ -326,13 +230,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/The Priory of the Orange Tree.png" height="150px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/The Priory of the Orange Tree.png" height="150px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">The Priory of the Orange Tree</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -341,13 +245,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/pkaSropun.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/pkaSropun.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងផ្កាស្រពោន</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -356,13 +260,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/lord-of-the-ring.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/lord-of-the-ring.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">The Lord Of the Ring</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -371,13 +275,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/kolapPailen.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/kolapPailen.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងកុលាបប៉ៃលិន</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -391,13 +295,13 @@
                                     <div class="row g-3">
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/kompulVIsal.png" height="150px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/kompulVIsal.png" height="150px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង​ កំពូលវិសាល</h6>
                                                     <p class="card-text text">រឿងនិទានខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -406,13 +310,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/tepAakSor.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/tepAakSor.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងទេពអប្សរតូច</h6>
                                                     <p class="card-text text">រឿងនិទានខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -421,13 +325,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/sophat.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/sophat.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង​ សុផាត</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -436,13 +340,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/tomTeav.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/tomTeav.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង ទុំទាវ</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -456,13 +360,13 @@
                                     <div class="row g-3">
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-P1.png" height="150px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/harry-P1.png" height="150px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Philosopher's Stone</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -471,13 +375,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p2.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/harry-p2.png" class="card-img "  height="150px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Chamber of Secrets</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -486,13 +390,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p3.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/harry-p3.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Prisoner of Azkaban: Large Print Edition</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -501,13 +405,13 @@
                                         </div>
                                         <div class="col-lg-3 col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p4.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/harry-p4.png" class="card-img " height="150px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Order of the Phoenix</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -527,13 +431,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/The Priory of the Orange Tree.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/The Priory of the Orange Tree.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">The Priory of the Orange Tree</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -542,13 +446,13 @@
                                         </div>
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/pkaSropun.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/pkaSropun.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងផ្កាស្រពោន</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -562,13 +466,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/lord-of-the-ring.png" class="card-img" height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/lord-of-the-ring.png" class="card-img" height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">The Lord Of the Ring</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -577,13 +481,13 @@
                                         </div>
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/kolapPailen.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/kolapPailen.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងកុលាបប៉ៃលិន</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -597,13 +501,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/kompulVIsal.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/kompulVIsal.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង​ កំពូលវិសាល</h6>
                                                     <p class="card-text text">រឿងនិទានខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -612,13 +516,13 @@
                                         </div>
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/tepAakSor.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/tepAakSor.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងទេពអប្សរតូច</h6>
                                                     <p class="card-text text">រឿងនិទានខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -632,13 +536,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/sophat.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/sophat.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង​ សុផាត</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -647,13 +551,13 @@
                                         </div>
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/tomTeav.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/tomTeav.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង ទុំទាវ</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -667,13 +571,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-P1.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/harry-P1.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Philosopher's Stone</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -682,13 +586,13 @@
                                         </div>
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p2.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/harry-p2.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Chamber of Secrets</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -702,13 +606,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p3.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/harry-p3.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Prisoner of Azkaban: Large Print Edition</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -717,13 +621,13 @@
                                         </div>
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p4.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/harry-p4.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Order of the Phoenix</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -744,13 +648,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/The Priory of the Orange Tree.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/The Priory of the Orange Tree.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">The Priory of the Orange Tree</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -764,13 +668,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/pkaSropun.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/pkaSropun.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងផ្កាស្រពោន</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -784,13 +688,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/lord-of-the-ring.png" class="card-img" height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/lord-of-the-ring.png" class="card-img" height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">The Lord Of the Ring</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -804,13 +708,13 @@
                                     <div class="row g-3 ">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/kolapPailen.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/kolapPailen.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងកុលាបប៉ៃលិន</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -824,13 +728,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/kompulVIsal.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/kompulVIsal.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង​ កំពូលវិសាល</h6>
                                                     <p class="card-text text">រឿងនិទានខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -844,13 +748,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/tepAakSor.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
+                                                <img src="../assets/img/book/tepAakSor.png" class="card-img "  height="400px" style="object-fit: cover;" alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿងទេពអប្សរតូច</h6>
                                                     <p class="card-text text">រឿងនិទានខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -864,13 +768,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/sophat.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/sophat.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង​ សុផាត</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -884,13 +788,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/tomTeav.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/tomTeav.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">រឿង ទុំទាវ</h6>
                                                     <p class="card-text text">ប្រលោមលោកខ្មែរ</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -904,13 +808,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-P1.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
+                                                <img src="../assets/img/book/harry-P1.png" height="400px" style="object-fit: cover;"  class="card-img "  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Philosopher's Stone</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -924,13 +828,13 @@
                                     <div class="row g-3">
                                         <div class="col-md-6 swipper-zoom-in">
                                             <div class=" card border-0">
-                                                <img src="assets/img/book/harry-p4.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
+                                                <img src="../assets/img/book/harry-p4.png" class="card-img " height="400px" style="object-fit: cover;"  alt="...">
                                                 <div class="card-body">
                                                     <h6 class="card-title text">Harry Potter and the Order of the Phoenix</h6>
                                                     <p class="card-text text">ប្រលោមលោកបរទេស</p>
                                                 </div>
                                                 <div class=" card-footer no-bg d-flex justify-content-between">
-                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                     <button  class="btn border-0 text-warning toggleButton">
                                                         <i class="fa-light fa-heart"></i>
                                                     </button>
@@ -965,14 +869,14 @@
                                                 <div class="col-lg-6">
                                                     <div class=" card border-0 p-2">
                                                         <div class="d-flex">
-                                                            <img src="assets/img/book/A-cruel-thirst.png"  height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                                            <img src="../assets/img/book/A-cruel-thirst.png"  height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                                             <div class="ms-3">
                                                                 <h6 class="card-title">
                                                                     A Cruel Thirst
                                                                 </h6>
                                                                 <p class=" text2" style="font-size: 12px;">LA fledgling vampire and a headstrong vemp huntress must work together Lorem, ipsum Lorem, ipsum dolor..</p>
                                                                 <div class="d-flex justify-content-between px-2">
-                                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                                     <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                                         1 ម៉ោងមុន
                                                                     </p>
@@ -987,14 +891,14 @@
                                             <div class="col-lg-6">
                                                     <div class=" card border-0 p-2">
                                                         <div class="d-flex">
-                                                            <img src="assets/img/book/harry-p3.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                                            <img src="../assets/img/book/harry-p3.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                                             <div class="ms-3">
                                                                 <h6 class="card-title">
                                                                     The Tinker’s Daughter
                                                                 </h6>
                                                                 <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
                                                                 <div class="d-flex justify-content-between px-2">
-                                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                                     <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                                         1 ថ្ងៃមុន
                                                                     </p>
@@ -1009,14 +913,14 @@
                                             <div class="col-lg-6">
                                                     <div class=" card border-0 p-2">
                                                         <div class="d-flex">
-                                                            <img src="assets/img/book/kompulVIsal.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                                            <img src="../assets/img/book/kompulVIsal.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                                             <div class="ms-3">
                                                                 <h6 class="card-title">
                                                                     The Tinker’s Daughter
                                                                 </h6>
                                                                 <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
                                                                 <div class="d-flex justify-content-between px-2">
-                                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                                     <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                                         1 ថ្ងៃមុន
                                                                     </p>
@@ -1031,14 +935,14 @@
                                             <div class="col-lg-6">
                                                     <div class=" card border-0 p-2">
                                                         <div class="d-flex">
-                                                            <img src="assets/img/book/the-thinker-d.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                                            <img src="../assets/img/book/the-thinker-d.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                                             <div class="ms-3">
                                                                 <h6 class="card-title">
                                                                     The Tinker’s Daughter
                                                                 </h6>
                                                                 <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
                                                                 <div class="d-flex justify-content-between px-2">
-                                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                                     <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                                         2 ថ្ងៃមុន
                                                                     </p>
@@ -1052,14 +956,14 @@
                                             <div class="col-lg-6">
                                                     <div class=" card border-0 p-2">
                                                         <div class="d-flex">
-                                                            <img src="assets/img/book/harry-p4.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                                            <img src="../assets/img/book/harry-p4.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                                             <div class="ms-3">
                                                                 <h6 class="card-title">
                                                                     The Tinker’s Daughter
                                                                 </h6>
                                                                 <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
                                                                 <div class="d-flex justify-content-between px-2">
-                                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                                     <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                                         3 ថ្ងៃមុន
                                                                     </p>
@@ -1073,14 +977,14 @@
                                             <div class="col-lg-6">
                                                     <div class=" card border-0 p-2">
                                                         <div class="d-flex">
-                                                            <img src="assets/img/book/harry-p2.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                                            <img src="../assets/img/book/harry-p2.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                                             <div class="ms-3">
                                                                 <h6 class="card-title">
                                                                     The Tinker’s Daughter
                                                                 </h6>
                                                                 <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
                                                                 <div class="d-flex justify-content-between px-2">
-                                                                    <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                                    <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                                     <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                                         1 សប្តាហ៍មុន
                                                                     </p>
@@ -1103,14 +1007,14 @@
                             <div class="col-lg-6">
                                 <div class=" card border-0 p-2">
                                     <div class="d-flex">
-                                        <img src="assets/img/book/A-cruel-thirst.png"  width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                        <img src="../assets/img/book/A-cruel-thirst.png"  width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                         <div class="ms-3">
                                             <h6 class="card-title">
                                                 A Cruel Thirst
                                             </h6>
                                             <p class=" text2" style="font-size: 12px;">LA fledgling vampire and a headstrong vemp huntress must work together Lorem, ipsum Lorem, ipsum dolor..</p>
                                             <div class="d-flex justify-content-between px-2">
-                                                <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                 <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                     1 ម៉ោងមុន
                                                 </p>
@@ -1125,14 +1029,14 @@
                         <div class="col-lg-6">
                                 <div class=" card border-0 p-2">
                                     <div class="d-flex">
-                                        <img src="assets/img/book/the-thinker-d.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
+                                        <img src="../assets/img/book/the-thinker-d.png" width="85px" height="120px" style="object-fit: cover;"  class=" rounded-1"  alt="newBook">
                                         <div class="ms-3">
                                             <h6 class="card-title">
                                                 The Tinker’s Daughter
                                             </h6>
                                             <p class=" text2" style="font-size: 12px;">She thought she’d won a pig… but this wasn’t that kind of lottery Lorem ipsum dolor sit Lorem ipsum dolor sit amet</p>
                                             <div class="d-flex justify-content-between px-2">
-                                                <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                                 <p  class="text-warning align-items-center" style="font-size: 12px;">
                                                     1 ថ្ងៃមុន
                                                 </p>
@@ -1174,7 +1078,7 @@
                                             </div>
                                             <div class=" card-footer">
                                                 <p class=" text text-warning">ទទួលបានការចាប់អារម្មណ៍ជាងគេ!</p>
-                                                <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1205,7 +1109,7 @@
                                             </div>
                                             <div class=" card-footer">
                                                 <p class=" text text-warning">ទទួលបានការចាប់អារម្មណ៍ជាងគេ!</p>
-                                                <a href="./pages/demo-book.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light hvr-ripple-out">ចូលអាន</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1223,7 +1127,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-6.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-6.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1236,13 +1140,13 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-3.jpg" class=" rounded-circle mx-auto " style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-3.jpg" class=" rounded-circle mx-auto " style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body  mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1255,7 +1159,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1265,7 +1169,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-2.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-2.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1278,13 +1182,13 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-1.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-1.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body  mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1297,7 +1201,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1307,7 +1211,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avatar-5.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avatar-5.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1320,13 +1224,13 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-4.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-4.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body  mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1339,7 +1243,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1356,7 +1260,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-6.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-6.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1369,7 +1273,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1380,7 +1284,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-3.jpg" class=" rounded-circle mx-auto " style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-3.jpg" class=" rounded-circle mx-auto " style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body  mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1393,7 +1297,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out" >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out" >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1405,7 +1309,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-2.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-2.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1418,7 +1322,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1429,7 +1333,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-1.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-1.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body  mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1442,7 +1346,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1454,7 +1358,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avatar-5.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avatar-5.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1467,7 +1371,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1478,7 +1382,7 @@
                                 <div class=" row g-3">
                                     <div class=" col-md-6 swipper-zoom-in">
                                         <div class="card border-0 no-bg">
-                                            <img src="./assets/img/avata/avatar-4.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
+                                            <img src="./../assets/img/avata/avatar-4.jpg" class=" rounded-circle mx-auto" style="width: 70px; object-fit: cover;" alt="">
                                             <div class=" card-body  mt-3 rounded-3 border-warning-style">
                                                 <h6 class=" card-text text-center">លោក បុន ធឿន</h6>
                                                 <p>⁜​​ មាន ៦ រឿងជាស្នាដៃរបស់គាត់។</p>
@@ -1491,7 +1395,7 @@
                                                     <i class='bx bxs-star-half text-warning'></i>
                                                     4.9
                                                 </div>
-                                                <a href="./pages/works-author.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
+                                                <a href="login-signup.html" class=" btn btn-warning btn-sm text-light mt-2 hvr-ripple-out " >មើលស្នាដៃ</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1575,7 +1479,7 @@
         <div class="container">
             <div class=" row pt-5 p-md-5 ">
                 <div class=" col-lg-5">
-                    <img src="./assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
+                    <img src="./../assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
                         <div class=" card-body  mt-3">
                         <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
                             ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន​ <br> <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
@@ -1586,12 +1490,12 @@
                         <div class=" card-body">
                             <h4 class=" card-title fw-bold text-warning">link បន្ថែម</h4>
                             <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
-                                <a href="sell-book.html" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
-                                <a href="show-book.html" class="text-decoration-none text-body hover-text">អាន</a>
-                                <a href="rating-page.html" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
-                                <a href="blog.html" class="text-decoration-none text-body hover-text">ប្លុក</a>
-                                <a href="about-us.html" class="text-decoration-none text-body hover-text">អំពីយើង</a>
-                                <a href="contact-us.html" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                                <a href="sell-book-no-log.html" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="show-book-no-log.html" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="rating-page-no-log.html" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="blog-no-log.html" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="about-us-no-log.html" class="text-decoration-none text-body hover-text">អំពីយើង</a>
+                                <a href="contact-us-no-log.html" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
                             </div>
                         </div>
                     </div>
@@ -1656,11 +1560,11 @@
 
 </body>
  <!-- link js bootstrap  -->
- <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
- <script src="assets/js/theme.js"></script>
+ <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/theme.js"></script>
   <!-- Swiper JS -->
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- <script src="assets/js/swipper.js"></script>
+ <script src="../assets/js/swipper.js"></script>
  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
- <script src="assets/js/animate.js"></script>
+ <script src="../assets/js/animate.js"></script>
 </html>
