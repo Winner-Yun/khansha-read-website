@@ -1,0 +1,21 @@
+.bg-img{
+    background-image: url('https://images.unsplash.com/photo-1578589335615-9e804277a5af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3MlMjBhbmQlMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.bg-img::before{
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
