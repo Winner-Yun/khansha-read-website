@@ -310,8 +310,133 @@
     <main>
         <section>
             <div class=" container-fluid bg-img">
-
+                    <div class="position-absolute z-2 " style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h1 class=" text-center text-white fw-bold mt-5">អំពី​ <b class=" text-warning typewriter"></b></h1>
+                    </div>
             </div>
+        </section>
+        <section>
+            <div class=" container">
+                <div class="row mt-5">
+                    <div class=" col-lg-3 col-md-5 col-6">
+                        <div class="card border-0">
+                            <div class="bg-warning rounded-circle overflow-hidden animate__animated animate__bounceIn">
+                                <div class=" d-flex justify-content-center">
+                                    <img src="../assets/img/auther/winnerdeve.png" class="d-none d-md-block" width="300px" alt="">
+                                    <img src="../assets/img/auther/winnerdeve.png" class="d-block d-md-none" width="200px" alt="">
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                    <div class=" col-lg-6">
+                        <div class="card border-0 ">
+                            <div class=" card-body">
+                                <h2 class=" card-title fw-bold text-warning animate__animated animate__zoomIn">អំពី Devoloper</h2>
+                                <p class=" card-text animate__animated animate__zoomIn"> ខ្ញុំឈ្មោះ យុន វិនន័រ ជាសិស្សដែលរៀននៅវគ្គ Bootstrap5 short course នៅសាលា ANT Training។ 
+                                    ខ្ញុំក៏ជាសិស្សដែលសិក្សាឆ្នាំទីបី នៅសាលាភូមិន្ទភ្នំពេញ នៅលើ ដេប៉ាតឺម៉ង់​ 
+                                    វិស្វកម្មបច្ចេកវិទ្យាព័ត៍មាន នៃមហាវិទ្យាល័យវិស្វកម្ម។ ខ្ញុំបានបង្កើតវេបសាយមួយនេះដើម្បីបញ្ចាក់ពីចំណេះដឹង
+                                    លើការអភិវឌ្ឈន៍លើវេបសាយបន្ទាប់ពីបានបញ្ចប់វគ្គសិក្សាខ្លីៗនៅសាលា ANT Training។
+                                </p>
+                                <div class=" d-flex d-block d-lg-none justify-content-end">
+                                    <img src="../assets/img/khanSha.png" class="d-block d-md-none" width="200px" alt="">
+                                    <img src="../assets/img/khanSha.png" class="d-none d-md-block" width="300px" alt="">
+                                </div>
+                                
+                                <h2 class=" card-title fw-bold text-warning text-end animate__animated animate__zoomIn">អំពី គេនស្យា រីឌ របស់យើង</h2>
+                                <p class=" card-text text-end text-lg-start animate__animated animate__zoomIn">
+                                    គេនស្យា រីឌជាវេបសាយសម្រាប់អ្នកដែលមានចណង់ចំណូលចិត្តលើការអានសៀវភៅ វេបសាយនេះផ្តល់នូវសៀវភៅដែលមានភាពងាយស្រួលក្នុងការអាន និងងាយស្វែងរកសៀវភៅដែលអ្នកចង់អាន។
+                                    អ្នកប្រើប្រាស់ក៏អាចចំណាយនូវថវិការទិញសៀវភៅយកមកអានដោយផ្ទាល់ៗក៏បាន​ ដោយតម្លៃរបស់សៀវភៅមានតម្លៃសមរម្យ 
+                                    និងមានការដឹកជញ្ជូនសៀវភៅដល់ទីតាំងផងដែរ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-3 pt-lg-5 d-none d-lg-block">
+                        <div class="card border-0">
+                            <div class="d-flex justify-content-lg-center justify-content-end animate__animated animate__rotateIn animate__delay-1s">
+                                <img src="../assets/img/khanSha.png"  width="400px" alt="">   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class=" row g-3 mt-5">
+                    <h4 class="text-warning">ទំនាក់ទំនងមកកាន់យើង:</h4>
+                    <hr>
+                    <div class="col-lg-8 swipper-fade-up">
+                        <div class="card border-0">
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">ឈ្មោះរបស់អ្នក</label>
+                                    <input type="text" class="form-control" id="name" placeholder="បញ្ចូលឈ្មោះរបស់អ្នក..." required>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលឈ្មោះរបស់អ្នក។
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">អ៊ីម៉ែលរបស់អ្នក</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលត្រឹមត្រូវ។
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក..." required>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលលេខទូរស័ព្ទរបស់អ្នក។
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">សាររបស់អ្នក</label>
+                                    <textarea class="form-control" id="message" rows="6" placeholder="សរសេរសាររបស់អ្នកមកកាន់យើង..." required></textarea>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលសាររបស់អ្នក។
+                                    </div>
+                                </div>
+                            
+                                <button type="submit" class="btn btn-warning text-light hvr-ripple-out">បញ្ញូន</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 swipper-fade-up">
+                        <div class="card border-0 shadow-sm p-4 rounded" style="background-color: var(--theme-bg);">
+                            <h5 class="mb-4 text-warning">តាមដានពួកយើងតាម Social media :</h5>
+                            <div class="d-flex justify-content-start">
+                                <a href="https://facebook.com" target="_blank" class="btn btn-outline-primary btn-lg rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" class="btn btn-outline-info btn-lg rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" class="btn btn-outline-danger btn-lg rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                                </a>
+                                <a href="https://gmail.com" target="_blank" class="btn btn-outline-success btn-lg rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-google" style="font-size: 1.5rem;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="mt-4">
+                            <h5 class="text-warning">ទីតាំងរបស់យើង:</h5>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.3135519089005!2d104.89073297481734!3d11.572389088628979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951001c8a7b55%3A0xa95ff42ea192073c!2sANT%20Technology%20Training%20School%202!5e1!3m2!1sen!2skh!4v1740457008533!5m2!1sen!2skh"  height="300" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>                    
+                         
+                </div>
+               
+            </div>
+            
         </section>
     </main>
    
@@ -411,4 +536,5 @@
  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
  <script src="../assets/js/animate.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
+ <script src="../assets/js/validation.js"></script>
 </html>

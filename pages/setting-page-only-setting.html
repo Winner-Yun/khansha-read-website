@@ -313,8 +313,8 @@
                 <div class="row g-3">
                     <div class="col-lg-4 d-none d-lg-block">
                         <div class="card border-0 no-bg">
-                            <h6 class="card-title">ប្រវត្តិរូបរបស់អ្នក</h6>
-                            <p class="card-text opacity-50 mt-3">អ្នកអាចកែប្រែ ឬ កែ​សម្រួលប្រវិត្តរូបរបស់លោកអ្នកបាន។</p>
+                            <h6 class="card-title ps-2">ប្រវត្តិរូបរបស់អ្នក</h6>
+                            <p class="card-text opacity-50 mt-3 ps-2">អ្នកអាចកែប្រែ ឬ កែ​សម្រួលប្រវិត្តរូបរបស់លោកអ្នកបាន។</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -346,10 +346,9 @@
                                     <button class="btn disabled">រក្សាទុក</button>
                                 </div>
                                 <div class="mt-3 mb-3">
-                                    <label class="form-label">អុីម៉ែល</label>
-                                    <div class="d-flex gap-2">
+                                    <div class=" col-8 ms-auto">
+                                        <label class="form-label">អុីម៉ែល</label>
                                         <input type="email" class="form-control" value="winner@gmail.com" readonly>
-                                        <button class="btn  w-50 btn-warning text-light hvr-ripple-out">ផ្លាស់ប្តូរអុីម៉ែល</button>
                                     </div>
                                 </div>
                             </form>
@@ -371,7 +370,7 @@
             </div>
         </section>
         
-        <section class="container mt-lg-5 mt-3">
+        <section class="container mt-lg-5 px-lg-4 mt-3">
             <div class="card border-0 no-bg">
                 <h6 class="card-title">ស្ថិតិការចំណាយលើសៀវភៅ</h6>
                 <p class="card-text opacity-50 mt-3">តាមដានចំណាយក្នុងការទិញសៀវភៅ។</p>
@@ -406,7 +405,7 @@
             </div>
         </section>
 
-        <section class="container mt-5">
+        <section class="container px-lg-4 mt-5" id="setting-scroll">
             <div class="card border-0 no-bg">
                 <h6 class="card-title">ការកំណត់លើវេបសាយ</h6>
                 <p class="card-text opacity-50 mt-3">អ្នកអាចកំណត់ ឬ កែរប្រែមុខងារផ្សេងៗរបស់វេបសាយរបស់យើង។</p>
@@ -491,7 +490,9 @@
                                             </div>
                                             <div class=" col-lg-3">
                                                 <div class=" card no-bg border-0">
-                                                    <button class="btn w-50 btn-primary">ផ្លាស់ប្តូរពាក្យសំងាត់</button>
+                                                    <button type="button" class="btn w-50 btn-primary" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                                                        ផ្លាស់ប្តូរពាក្យសំងាត់
+                                                      </button>
                                                 </div>
                                                 
                                             </div>
@@ -521,8 +522,46 @@
         </section>
         
         
-        
+        <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">ប្តូរពាក្យសម្ងាត់</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form id="passwordForm" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                      <label for="currentPassword" class="form-label">ពាក្យសម្ងាត់បច្ចុប្បន្ន</label>
+                      <input type="password" class="form-control" id="currentPassword" placeholder="ពាក្យសម្ងាត់បច្ចុប្បន្ន..." required>
+                      <div class="invalid-feedback">
+                        សូមផ្តល់ពាក្យសម្ងាត់បច្ចុប្បន្នរបស់អ្នក។
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="newPassword" class="form-label">ពាក្យសម្ងាត់ថ្មី</label>
+                      <input type="password" class="form-control" id="newPassword" placeholder="ពាក្យសម្ងាត់ថ្មី..." required>
+                      <div class="invalid-feedback">
+                        សូមផ្តល់ពាក្យសម្ងាត់ថ្មី។
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="confirmPassword" class="form-label">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                      <input type="password" class="form-control" id="confirmPassword" placeholder="បញ្ជាក់ពាក្យសម្ងាត់..." required>
+                      <div class="invalid-feedback" id="confirmPasswordError">
+                        សូមបញ្ជាក់ពាក្យសម្ងាត់ថ្មីរបស់អ្នក។
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-warning text-light hvr-ripple-out">បញ្ញូនប្រតិបត្តការណ៍</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                
     </main>
+
+    
    
 
     <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
@@ -622,13 +661,21 @@
  <script src="../assets/js/setting-dark-light-mode.js"></script>
  <script src="../assets/js/time_coundown.js"></script>
  <script src="../assets/js/count-bar.js"></script>
+ <script src="../assets/js/validation.js"></script>
  <script>
     document.addEventListener("DOMContentLoaded", function () {
-        let scrollPercentage = 44;
-        
-        let scrollPosition = (document.body.scrollHeight - window.innerHeight) * (scrollPercentage / 100);
-        
-        window.scrollTo(0, scrollPosition);
-    });
-</script>
+     let sectionId = "#setting-scroll";
+     let sectionElement = document.querySelector(sectionId);
+     
+     if (sectionElement) {
+         let navbarHeight = document.querySelector(".navbar").offsetHeight;
+         let position = sectionElement.offsetTop - navbarHeight;
+         window.scrollTo({
+             top: position,
+             behavior: "smooth"
+         });
+     }
+ });
+ 
+ </script>
 </html>
