@@ -3,10 +3,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 30vh;
     width: 100%;
     position: relative;
     z-index: 1;
+    animation: moveBackground 8s cubic-bezier(0.42, 0, 0.58, 1) infinite, scaleBackground 8s ease-in-out infinite;
 }
 
 .bg-img::before{
@@ -19,3 +20,24 @@
     bottom: 0;
     z-index: 2;
 }
+
+@keyframes moveBackground {
+    0% {
+      background-position: left;
+    }
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+  }
+  
+  @keyframes scaleBackground {
+    0%, 100% {
+      background-size: 105%;
+    }
+    50% {
+      background-size: 110%;
+    }
+  }

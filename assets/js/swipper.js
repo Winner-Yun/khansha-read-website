@@ -125,6 +125,26 @@ document.addEventListener("DOMContentLoaded", function() {
         .start();
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    var app = document.querySelector('.typewriter2'); // Select element by class
+
+    var typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 75,
+        autoStart: true,
+        cursor: "|"
+    });
+
+    typewriter
+        .typeString('គេនស្យា​ រីឌ')
+        .pauseFor(2500)
+        .deleteAll()
+        .typeString('Devoloper')
+        .pauseFor(2500)
+        .deleteAll()
+        .start();
+});
+
 const backToTopButton = document.getElementById("backToTop");
         
 window.onscroll = function () {
