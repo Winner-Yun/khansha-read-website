@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
+    <title>signup</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- link css bootstrap  -->
     <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
@@ -44,34 +44,48 @@
                             <h2 id="formTitle" class=" text-light">ចូលប្រើប្រាស់</h2>
                         </div>
                         <div class="btn-group w-100 mb-3">
-                            <a href="#" class="btn btn-primary active" id="showLogin">ចូល</a>
-                            <a href="signup-login.html" class="btn btn-outline-primary" id="showSignup">ចុះឈ្មោះ</a>
+                            <a href="login-signup.html" class="btn btn-outline-primary  id="showLogin">ចូល</a>
+                            <a href="#" class="btn btn-outline-primary active" id="showSignup">ចុះឈ្មោះ</a>
                         </div>
             
                         <div class="form-wrapper swipper-fade-up">
                             <div id="loginForm" class="form-content active">
                                 <form class="needs-validation " novalidate>
                                     <div class="mb-3">
-                                        <label for="loginEmail" class="form-label text-light">អ៊ីមែល</label>
-                                        <input type="email" class="form-control" id="loginEmail" placeholder="សូមបញ្ចូលអ៊ីមែលរបស់អ្នក..." required>
+                                        <label for="registerUsername" class="form-label text-light">ឈ្មោះអ្នកប្រើ</label>
+                                        <input type="text" class="form-control" id="registerUsername" placeholder="សូមបញ្ចូលឈ្មោះអ្នកប្រើ..." required>
+                                        <div class="invalid-feedback text-danger">សូមបញ្ចូលឈ្មោះអ្នកប្រើ។</div>
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="registerEmail" class="form-label text-light">អ៊ីមែល</label>
+                                        <input type="email" class="form-control" id="registerEmail" placeholder="សូមបញ្ចូលអ៊ីមែលរបស់អ្នក..." required>
                                         <div class="invalid-feedback text-danger">សូមបញ្ចូលអ៊ីមែលត្រឹមត្រូវ។</div>
                                     </div>
+                                    
                                     <div class="mb-3">
-                                        <label for="loginPassword" class="form-label text-light">ពាក្យសម្ងាត់</label>
-                                        <input type="password" class="form-control" id="loginPassword" placeholder="សូមបញ្ចូលពាក្យសំងាត់..." required>
+                                        <label for="registerPassword" class="form-label text-light">ពាក្យសម្ងាត់</label>
+                                        <input type="password" class="form-control" id="registerPassword" placeholder="សូមបញ្ចូលពាក្យសម្ងាត់..." required>
                                         <div class="invalid-feedback">សូមបញ្ចូលពាក្យសម្ងាត់។</div>
                                     </div>
-                                    <button type="submit" class="btn btn-primary w-100">ចូល</button>
+                                    
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label text-light">បញ្ជាក់ពាក្យសម្ងាត់</label>
+                                        <input type="password" class="form-control" id="confirmPassword" placeholder="សូមបញ្ជាក់ពាក្យសម្ងាត់..." required>
+                                        <div class="invalid-feedback">សូមបញ្ជាក់ពាក្យសម្ងាត់។</div>
+                                    </div>
+                                
+                                    <button type="submit" class="btn btn-primary w-100">ចុះឈ្មោះ</button>
                                 </form>
-                        
+                                
                                 <div class="text-center mt-3">
                                     <p class="text-light">ឬចូលប្រើប្រាស់តាម</p>
-                                    <div class="d-flex justify-content-center gap-3"> 
+                                    <div class="d-flex justify-content-center gap-3">
                                         <a href="" class="btn btn-success "><i class="fab fa-google"></i></a>
                                         <a href="" class="btn btn-primary"><i class="fab fa-facebook"></i></a>
                                         <a href="" class="btn btn-danger"><i class="fab fa-instagram"></i></a>
                                     </div>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -83,22 +97,22 @@
 </body>
 <script src="../assets/js/animate.js"></script>
 <script>
-    (function () {
-    'use strict';
-    var forms = document.querySelectorAll('.needs-validation');
-    Array.prototype.slice.call(forms).forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                event.stopPropagation();
-            } else {
-                event.preventDefault();
-                window.location.href = '../index.html';
-            }
+        (function () {
+        'use strict';
+        var forms = document.querySelectorAll('.needs-validation');
+        Array.prototype.slice.call(forms).forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                } else {
+                    event.preventDefault();
+                    window.location.href = '../index.html';
+                }
 
-            form.classList.add('was-validated');
-        }, false);
-    });
-})();
+                form.classList.add('was-validated');
+            }, false);
+        });
+    })();
 </script>
 </html>
