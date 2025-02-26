@@ -1,0 +1,12 @@
+.hero-banner{
+    background: url(https://wallpapercrafter.com/desktop3/973418-bookcase-books-collection-cover-culture-education.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}
+
+.bg-dark-blur{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50px 0 0 0 !important;
+}
