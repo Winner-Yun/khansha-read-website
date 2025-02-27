@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-us</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- link css bootstrap  -->
+    <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
+    <!-- link fontawesome icon  -->
+    <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.css">
+    <!-- link icon bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/show-book.css">
+    <link rel="stylesheet" href="../assets/css/sell-book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="../assets/css/about-us.css">
+</head>
+    <style>
+        [data-bs-theme=light] {
+            --theme-bg: #f8f9fa;
+            --low-bg:rgba(255, 255, 255, 0.4);
+            --border-top: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        [data-bs-theme=dark] {
+            --theme-bg: #212525;
+            --low-bg:rgba(0, 0, 0, 0.4);
+            --border-top: 1px solid rgba(255, 255, 255, 0.125);
+        }
+    </style>
+<body>
+    <div id="loader">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+        <div class="loading-text">សូមរងចាំ...</div>
+    </div>
+    
+    <header class="position-sticky top-0 z-3">
+        <!-- Navbar -->
+        <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
+            <div class="container">
+                <div>
+                    <a href="../index.html" class="navbar-brand text-decoration-none text-center">
+                        <div class="d-flex mt-4 gap-2">
+                            <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                            <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
+                                <span class="position-absolute top-custom start-100 translate-middle badge rounded-pill d-none d-lg-block">
+                                    <p class=" text-warning fs-12"> khanshaRead.com</p>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </h2>
+                        </div>                       
+                    </a>
+                </div>
+                <div>
+                    <form class="d-flex" role="search">
+                        <button class="btn border-0 search-icon d-none d-md-block" type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                        <input class="form-control me-2 border-0 circle style-form d-none d-md-block" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                        <button class="btn  search-icon d-block d-md-none btn-search-sm" type="button" data-bs-target="#modal-search" data-bs-toggle="modal"><i class='bx bx-search fs-4' ></i></button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-3">
+ 
+                        <button type="button" class="btn btn-link circle-btn nav-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#themeModal">
+                            <i class="bi theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                        </button>
+                        
+                        <div>
+                            <a href="login-signup.html" class="btn btn-primary text-light fw-bold  btn-sm ">ចូលគណនី</a>
+                            <a href="signup-login.html" class="btn btn-success text-light fw-bold btn-sm">បង្កើតគណនី</a>
+                        </div>
+                    </div>
+                
+            </div>
+        </nav>
+
+        <!-- Sidebar Toggle Button -->
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-none d-md-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-start" style="width: 80px;" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class=" offcanvas-header">
+                <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+            </div>
+            <div class="offcanvas-body pt-5">
+                    <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                        <li class="nav-item">
+                            <a href="home-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                <i class='bx bx-home-alt'></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-book"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sell-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="fa-light fa-basket-shopping"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="fa-light fa-cart-arrow-down"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-bookmark"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class=" offcanvas-bottom">
+                <button class="btn border-0 position-fixed bottom-0 ms-3" type="button" data-bs-dismiss="offcanvas" >
+                    <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+                </button>
+            </div>
+          </div>
+
+        <!-- Sidebar -->
+        <div class=" d-none d-lg-block sidebar">
+            <div class="collapse  collapse-horizontal position-absolute show" id="collapseWidthExample">
+                <div class="card card-body border-0 p-set" style="width: 80px; height: 100vh; border-radius: 0; background-color: var(--theme-bg);">
+                    <div>
+                        <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                            <li class="nav-item">
+                                <a href="home-page.html" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                    <i class='bx bx-home-alt'></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-book"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="sell-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-basket-shopping"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-cart-arrow-down"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border-0">
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <button class="btn border-0 search-icon " type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                    <input class="form-control me-2 border-0 circle style-form bg-body" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning fw-light" id="themeModalLabel">
+                        <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                        ជ្រើសរើសពណ៍ផ្ទៃខាងក្រោយ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="light" type="button">
+                        <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i> ភ្លឺ
+                    </button>
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="dark" type="button">
+                        <i class="bi bi-moon-fill me-2 opacity-50" data-theme-icon="bi-moon-fill"></i> ងងឹត
+                    </button>
+                    <button class="btn w-100 d-flex align-items-center" data-bs-theme-value="auto" type="button">
+                        <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i> Auto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section>
+            <div class=" container-fluid bg-img">
+                    <div class="position-absolute z-2 " style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                        <h2 class=" text-center text-white fw-bold mt-5">អំពី​ <b class=" text-warning typewriter2"></b></h2>
+                    </div>
+            </div>
+        </section>
+        <section>
+            <div class=" container">
+                <div class="row mt-5">
+                    <div class=" col-lg-3 col-md-5 col-6">
+                        <div class="card border-0">
+                            <div class="bg-warning rounded-circle overflow-hidden animate__animated animate__bounceIn">
+                                <div class=" d-flex justify-content-center">
+                                    <img src="../assets/img/auther/winnerdeve.png" class="d-none d-md-block" width="300px" alt="">
+                                    <img src="../assets/img/auther/winnerdeve.png" class="d-block d-md-none" width="200px" alt="">
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                    <div class="col-6 d-block d-lg-none">
+                        <div class="card border-0 pt-5">
+                            <h4 class=" text-warning">លោក យុន វិនន័រ </h4>  
+                            <p class=" text-warning">Designer និង ជាអ្នកបង្កើតវេបសាយមួយនេះ</p>
+                        </div>
+                    </div>
+                    <div class=" col-lg-6">
+                        <div class="card border-0 ">
+                            <div class=" card-body">
+                                <h2 class=" card-title fw-bold text-warning animate__animated animate__zoomIn">អំពី Devoloper</h2>
+                                <p class=" card-text animate__animated animate__zoomIn"> ខ្ញុំឈ្មោះ យុន វិនន័រ ជាសិស្សដែលរៀននៅវគ្គ Bootstrap5 short course នៅសាលា ANT Training។ 
+                                    ខ្ញុំក៏ជាសិស្សដែលសិក្សាឆ្នាំទីបី នៅសាលាភូមិន្ទភ្នំពេញ នៅលើ ដេប៉ាតឺម៉ង់​ 
+                                    វិស្វកម្មបច្ចេកវិទ្យាព័ត៍មាន នៃមហាវិទ្យាល័យវិស្វកម្ម។ ខ្ញុំបានបង្កើតវេបសាយមួយនេះដើម្បីបញ្ចាក់ពីចំណេះដឹង
+                                    លើការអភិវឌ្ឈន៍លើវេបសាយបន្ទាប់ពីបានបញ្ចប់វគ្គសិក្សាខ្លីៗនៅសាលា ANT Training។
+                                </p>
+                                <div class=" d-flex d-block d-lg-none justify-content-end">
+                                    <img src="../assets/img/khanSha.png" class="d-block d-md-none" width="200px" alt="">
+                                    <img src="../assets/img/khanSha.png" class="d-none d-md-block" width="300px" alt="">
+                                </div>
+                                
+                                <h2 class=" card-title fw-bold text-warning text-end animate__animated animate__zoomIn">អំពី គេនស្យា រីឌ របស់យើង</h2>
+                                <p class=" card-text text-end text-lg-start animate__animated animate__zoomIn">
+                                    គេនស្យា រីឌជាវេបសាយសម្រាប់អ្នកដែលមានចណង់ចំណូលចិត្តលើការអានសៀវភៅ វេបសាយនេះផ្តល់នូវសៀវភៅដែលមានភាពងាយស្រួលក្នុងការអាន និងងាយស្វែងរកសៀវភៅដែលអ្នកចង់អាន។
+                                    អ្នកប្រើប្រាស់ក៏អាចចំណាយនូវថវិការទិញសៀវភៅយកមកអានដោយផ្ទាល់ៗក៏បាន​ ដោយតម្លៃរបស់សៀវភៅមានតម្លៃសមរម្យ 
+                                    និងមានការដឹកជញ្ជូនសៀវភៅដល់ទីតាំងផងដែរ។
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-3 pt-lg-5 d-none d-lg-block">
+                        <div class="card border-0">
+                            <div class="d-flex justify-content-lg-center justify-content-end animate__animated animate__rotateIn animate__delay-1s">
+                                <img src="../assets/img/khanSha.png"  width="400px" alt="">   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class=" row g-3 mt-5">
+                    <h4 class="text-warning">ទំនាក់ទំនងមកកាន់យើង:</h4>
+                    <hr>
+                    <div class="col-lg-8 swipper-fade-up">
+                        <div class="card border-0">
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">ឈ្មោះរបស់អ្នក</label>
+                                    <input type="text" class="form-control" id="name" placeholder="បញ្ចូលឈ្មោះរបស់អ្នក..." required>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលឈ្មោះរបស់អ្នក។
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">អ៊ីម៉ែលរបស់អ្នក</label>
+                                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលអាសយដ្ឋានអ៊ីមែលត្រឹមត្រូវ។
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">លេខទូរស័ព្ទ</label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="បញ្ចូលលេខទូរស័ព្ទរបស់អ្នក..." required>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលលេខទូរស័ព្ទរបស់អ្នក។
+                                    </div>
+                                </div>
+                            
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">សាររបស់អ្នក</label>
+                                    <textarea class="form-control" id="message" rows="6" placeholder="សរសេរសាររបស់អ្នកមកកាន់យើង..." required></textarea>
+                                    <div class="invalid-feedback">
+                                        សូមបញ្ចូលសាររបស់អ្នក។
+                                    </div>
+                                </div>
+                            
+                                <button type="submit" class="btn btn-warning text-light hvr-ripple-out">បញ្ញូន</button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4 swipper-fade-up">
+                        <div class="card border-0 shadow-sm p-4 rounded" style="background-color: var(--theme-bg);">
+                            <h5 class="mb-4 text-warning">តាមដានពួកយើងតាម:</h5>
+                            <div class="d-flex justify-content-start">
+                                <a href="https://facebook.com" target="_blank" class="btn btn-outline-primary btn-lg rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                                </a>
+                                <a href="https://twitter.com" target="_blank" class="btn btn-outline-info btn-lg rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-twitter" style="font-size: 1.5rem;"></i>
+                                </a>
+                                <a href="https://instagram.com" target="_blank" class="btn btn-outline-danger btn-lg rounded-circle me-3" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                                </a>
+                                <a href="https://gmail.com" target="_blank" class="btn btn-outline-success btn-lg rounded-circle" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="bi bi-google" style="font-size: 1.5rem;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    
+                        <div class="mt-4">
+                            <h5 class="text-warning">ទីតាំងរបស់យើង:</h5>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.3135519089005!2d104.89073297481734!3d11.572389088628979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951001c8a7b55%3A0xa95ff42ea192073c!2sANT%20Technology%20Training%20School%202!5e1!3m2!1sen!2skh!4v1740457008533!5m2!1sen!2skh"  height="300" style="border:0; width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>                    
+                         
+                </div>
+               
+            </div>
+            
+        </section>
+    </main>
+   
+
+    <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
+        <div class="container">
+            <div class=" row pt-5 p-md-5 ">
+                <div class=" col-lg-5">
+                    <img src="../assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
+                        <div class=" card-body  mt-3">
+                        <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
+                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន <br>​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">link បន្ថែម</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="login-signup.html" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="login-signup.html" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="login-signup.html" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="blog-no-log.html" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="about-us-no-log.html" class="text-decoration-none text-body hover-text">អំពីយើង</a>
+                                <a href="contact-us-no-log.html" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0 " style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ជំនួយ</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="login-signup.html" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="login-signup.html" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="login-signup.html" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="blog-no-log.html" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="about-us-no-log.html" class="text-decoration-none text-body hover-text">អំពីយើង</a>
+                                <a href="contact-us-no-log.html" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <button class=" btn btn-warning rounded-circle z-3 position-fixed hvr-ripple-out2" id="backToTop"><i class="fa-duotone fa-solid fa-up-from-line fs-2 text-body"></i></button>
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ទំនាក់ទំនង</h4>
+                            <p>54 St 606, Phnom Penh</p>
+                            <div class=" d-flex gap-2">
+                                <p>Email:</p>
+                                <a href="#">khanshaRead@gmail.com</a>
+                            </div>
+                            <div class=" d-flex">
+                                <p>Phone:</p>
+                                <p class=" fw-bold" style="font-size: 14px;">(855) 089 / 081 168168</p>
+                            </div>
+                            <div class=" d-flex">
+                                <a href="">
+                                    <a href="#"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/appstore.svg"
+                                        alt="" class="img-fluid" /></a>
+                                <a href="#" class="ms-2"><img
+                                        src="https://geeksui.codescandy.com/geeks/assets/images/svg/playstore.svg" alt=""
+                                        class="img-fluid" /></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-0  py-2 mt-5" style="border-top: var(--border-top);">
+                    
+                    <div class="col-lg-10 col-12">
+                        <div class="d-lg-flex align-items-center">
+                            <div class="me-4">
+                                <span>© 2024 khanshaRead.com</span>
+                            </div>
+                            <div>
+                                <nav class="nav nav-footer ">
+                                    <a class="nav-link ps-0 text-body hover-text" href="#">Privacy Policy</a>
+                                    <a class="nav-link px-2 px-md-3 text-body hover-text" href="#">Cookie Notice </a>
+                                    <a class="nav-link text-body hover-text" href="#">Terms of Use</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            
+
+</body>
+ <!-- link js bootstrap  -->
+ <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/theme.js"></script>
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="../assets/js/swipper.js"></script>
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+ <script src="../assets/js/animate.js"></script>
+ <script src="../assets/js/time_coundown.js"></script>
+ <script src="../assets/js/validation.js"></script>
+ <script src="../assets/js/script.js"></script>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- link css bootstrap  -->
+    <link rel="stylesheet" href="../assets/libs/bootstrap/css/bootstrap.css">
+    <!-- link fontawesome icon  -->
+    <link rel="stylesheet" href="../assets/libs/fontawesome/css/all.css">
+    <!-- link icon bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="icon" href="../assets/img/khanSha.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/show-book.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+    <link rel="stylesheet" href="../assets/css/sell-book.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+    <style>
+        [data-bs-theme=light] {
+            --theme-bg: #f8f9fa;
+            --low-bg:rgba(255, 255, 255, 0.4);
+            --border-top: 1px solid rgba(0, 0, 0, 0.125);
+        }
+        [data-bs-theme=dark] {
+            --theme-bg: #212525;
+            --low-bg:rgba(0, 0, 0, 0.4);
+            --border-top: 1px solid rgba(255, 255, 255, 0.125);
+        }
+    </style>
+<body>
+    <div id="loader">
+        <div class="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face left"></div>
+            <div class="face right"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+        </div>
+        <div class="loading-text">សូមរងចាំ...</div>
+    </div>
+    
+    <header class="position-sticky top-0 z-3">
+        <!-- Navbar -->
+        <nav class="navbar align-content-center border-0 " style="background-color: var(--theme-bg);">
+            <div class="container">
+                <div>
+                    <a href="../index.html" class="navbar-brand text-decoration-none text-center">
+                        <div class="d-flex mt-4 gap-2">
+                            <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                            <h2 class="fs-4 text-warning position-relative mt-auto mt-lg-0 d-none d-md-block">គេនស្យា រីឌ
+                                <span class="position-absolute top-custom start-100 translate-middle badge rounded-pill d-none d-lg-block">
+                                    <p class=" text-warning fs-12"> khanshaRead.com</p>
+                                    <span class="visually-hidden">unread messages</span>
+                                  </span>
+                            </h2>
+                        </div>                       
+                    </a>
+                </div>
+                <div>
+                    <form class="d-flex" role="search">
+                        <button class="btn border-0 search-icon d-none d-md-block" type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                        <input class="form-control me-2 border-0 circle style-form d-none d-md-block" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                        <button class="btn  search-icon d-block d-md-none btn-search-sm" type="button" data-bs-target="#modal-search" data-bs-toggle="modal"><i class='bx bx-search fs-4' ></i></button>
+                    </form>
+                </div>
+
+                <div>
+                    <div class="d-flex gap-3">
+ 
+                        <button type="button" class="btn btn-link circle-btn nav-link d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#themeModal">
+                            <i class="bi theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                        </button>
+                        
+                        <div>
+                            <a href="login-signup.html" class="btn btn-primary text-light fw-bold  btn-sm ">ចូលគណនី</a>
+                            <a href="signup-login.html" class="btn btn-success text-light fw-bold btn-sm">បង្កើតគណនី</a>
+                        </div>
+                    </div>
+                
+            </div>
+        </nav>
+
+        <!-- Sidebar Toggle Button -->
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-none d-md-block" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+
+        <button class="btn border-0 position-fixed bottom-0 ms-3 d-block d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-expanded="false" aria-controls="collapseWidthExample">
+            <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+        </button>
+        
+        <div class="offcanvas offcanvas-start" style="width: 80px;" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasExampleLabel">
+            <div class=" offcanvas-header">
+                <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+            </div>
+            <div class="offcanvas-body pt-5">
+                    <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                        <li class="nav-item">
+                            <a href="../index.html" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                <i class='bx bx-home-alt'></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="show-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-book"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="sell-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="fa-light fa-basket-shopping"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="fa-light fa-cart-arrow-down"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-bookmark"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+
+            <div class=" offcanvas-bottom">
+                <button class="btn border-0 position-fixed bottom-0 ms-3" type="button" data-bs-dismiss="offcanvas" >
+                    <i class='bx bxs-dock-left opacity-50 hover-style'></i>
+                </button>
+            </div>
+          </div>
+
+        <!-- Sidebar -->
+        <div class=" d-none d-lg-block sidebar">
+            <div class="collapse  collapse-horizontal position-absolute show" id="collapseWidthExample">
+                <div class="card card-body border-0 p-set" style="width: 80px; height: 100vh; border-radius: 0; background-color: var(--theme-bg);">
+                    <div>
+                        <ul class="nav nav-pills flex-column mb-auto text-center gap-4">
+                            <li class="nav-item">
+                                <a href="../index.html" class="nav-link nav-link-hover hvr-float-shadow text-body" aria-current="page">
+                                    <i class='bx bx-home-alt'></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-book"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="sell-book-no-log.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-basket-shopping"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="fa-light fa-cart-arrow-down"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-bookmark"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login-signup.html" class="nav-link nav-link-hover hvr-float-shadow text-body">
+                                    <i class="bi bi-gear"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="modal fade" id="modal-search" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content border-0">
+            <div class="modal-body">
+                <form class="d-flex" role="search">
+                    <button class="btn border-0 search-icon " type="submit"><i class='bx bx-search fs-4 opacity-50' ></i></button>
+                    <input class="form-control me-2 border-0 circle style-form bg-body" type="search" placeholder="ស្វែងរក, សៀវភៅ​, អ្នកនិពន្ធ..." aria-label="Search">
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="themeModal" tabindex="-1" aria-labelledby="themeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-warning fw-light" id="themeModalLabel">
+                        <img src="../assets/img/khanSha.png" alt="logo" width="50px" height="50px" style="object-fit: cover;">
+                        ជ្រើសរើសពណ៍ផ្ទៃខាងក្រោយ</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="light" type="button">
+                        <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i> ភ្លឺ
+                    </button>
+                    <button class="btn w-100 mb-2 d-flex align-items-center" data-bs-theme-value="dark" type="button">
+                        <i class="bi bi-moon-fill me-2 opacity-50" data-theme-icon="bi-moon-fill"></i> ងងឹត
+                    </button>
+                    <button class="btn w-100 d-flex align-items-center" data-bs-theme-value="auto" type="button">
+                        <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i> Auto
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <section class="hero-banner">
+            <div class="container-fluid  h-100 position-relative">
+                <div class="col-md-4 col-lg-3 position-absolute bottom-0 end-0">
+                    <div class=" card bg-dark-blur border-0">
+                        <div class=" d-flex justify-content-center">
+                            <img src="../assets/img/khanSha.png" width="100px" alt="">
+                        </div>
+                        <div class=" card-body">
+                            <p class=" card-title text-center text-warning fw-medium">សូមស្វាគមន៍មកកាន់ គេនស្យា ប្លុក!!</hdiv>
+                            <p class="card-text text-light text-center">រីករាយជាមួយ ការអានអត្ថបទរបស់ពួកយើង</p>
+                            <p class="card-text text-light text-center" style="line-height: 2rem;">មានចម្ងល់ផ្ញើសារមកយើងតាម <br> <i class="fa-light fa-envelope pe-2 text-warning"></i><a href="#" class="text-warning">khanshaRead@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" mt-3" >
+            <div class="container">
+                <nav class="d-flex shadow justify-content-between no-bg  p-4">
+                    <form style="width: 30%;">
+                        <select class="form-select rounded-0" aria-label="Default select example">
+                            <option selected disabled>ប្រភេទព័ត៍មាន</option>
+                            <option value="1">ព័ត៌មានអំពីសៀវភៅថ្មីៗ</option>
+                            <option value="2">ព័ត៍មានទូទៅ</option>
+                            <option value="3">ប្រវត្តិសាស្រ្ត</option>
+                          </select>
+                    </form>
+                    
+                    <form style="width: 25%;">
+                        <select class="form-select rounded-0" aria-label="Default select example">
+                            <option selected disabled>ស្លាក</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                    </form>
+    
+                      <form class="d-flex" style="width: 35%;" role="search">
+                        <input class="form-control me-2 rounded-0" type="search" placeholder="ស្វែងរកប្រភេទប្លុកដែលអ្នកចង់អាន..." aria-label="Search">
+                        <button class="btn btn-outline-warning rounded-0" type="submit"><i class="fa-light fa-magnifying-glass"></i></button>
+                      </form>
+                </nav>
+            </div>
+        </section>
+        <section class=" mt-5">
+            <div class="container">
+                <div class="row g-3">
+                    <div class="col-lg-6 swipper-fade-up">
+                        <div class="card border-0 shadow-sm">
+                          <img src="https://cdn.pixabay.com/photo/2016/09/07/10/20/wave-1651291_640.jpg"
+                            class="card-img rounded-0" style="height: 300px;" alt="">
+                          <div class="card-body">
+                            <h4 class="card-title text-warning">ចំណុចថ្មីៗនៃការអប់រំ</h4>
+                            <p class="card-text text-muted">
+                              ការអប់រំថ្មីមានតួនាទីសំខាន់ក្នុងការផ្លាស់ប្តូររបៀបនៃការរៀនសូត្រប្រកបដោយច្នៃប្រឌិត
+                              និងបច្ចេកវិទ្យា។ យុវវ័យទទួលបានឱកាសច្រើនក្នុងការរីកចម្រើននិងបង្កើតសមត្ថភាពថ្មីៗ។
+                              ការអប់រំក៏ផ្តោតសំខាន់លើការអភិវឌ្ឍន៍គំនិតស្វែងយល់និងសមត្ថភាពសំរាប់ពេលអនាគតផងដែរ។
+                            </p>
+                  
+                            <div class="d-flex align-items-center mb-4">
+                              <a href="https://www.facebook.com/sharer/sharer.php?u=your-page-url" target="_blank" class="text-warning me-3">
+                                <i class="fab fa-facebook-square fa-lg"></i>
+                              </a>
+                              <a href="https://twitter.com/share?url=your-page-url" target="_blank" class="text-warning me-3">
+                                <i class="fab fa-twitter fa-lg"></i>
+                              </a>
+                              <a href="https://www.linkedin.com/shareArticle?mini=true&url=your-page-url" target="_blank" class="text-warning">
+                                <i class="fab fa-linkedin fa-lg"></i>
+                              </a>
+                            </div>
+                  
+                            <h5 class="mb-3">ចំណាប់អារម្មណ៍ & បញ្ចេញមតិ</h5>
+                            <form>
+                              <div class="mb-3">
+                                <textarea class="form-control" id="comment" rows="3" placeholder="សរសេរអត្ថបទរបស់អ្នក..."></textarea>
+                              </div>
+                              <button type="submit" class="btn btn-warning text-light hvr-ripple-out">ផ្ញើសារ</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    <div class="col-lg-6">
+                        <div class="row shadow p-3 g-3">
+                            <div class="col-6 swipper-zoom-in ">
+                                <a href="" class="text-decoration-none hover-effect">
+                                    <div class=" card border-0">
+                                        <img src="https://cdn.pixabay.com/photo/2016/08/31/09/06/silhouette-1632912_1280.jpg" class=" card-img rounded-0 " style=" height: 150px; object-fit: cover;" alt="">
+                                        <p class=" card-title fw-medium mt-2 text">សារសំខាន់នៃការអប់រំទូលំទូលាយ</p>
+                                        <p class=" card-text text2">ការអប់រំទូលំទូលាយជាគន្លឹះដើម្បីបង្កើតសង្គមដែលមានចំណេះដឹងល្អ និងប្រសើរឡើង។ 
+                                            វាមានតួនាទីជំរុញសមត្ថភាពសម្រាប់កុមារនិងយុវវ័យក្នុងការអភិវឌ្ឍបញ្ញានិងជំនាញគ្រប់គ្រងជីវិតរបស់ពួកគេ។</p>
+                                    </div>
+                                </a>         
+                            </div>
+                            <div class="col-6 swipper-zoom-in">
+                                <a href="" class=" text-decoration-none hover-effect">
+                                    <div class=" card border-0">
+                                        <img src="https://wallpapers.com/images/featured/information-background-dx3hozo5gn8p1rg0.jpg" class=" card-img rounded-0 " style=" height: 150px; object-fit: cover;" alt="">
+                                        <p class=" card-title fw-medium mt-2 text">សារសំខាន់នៃការអប់រំទូលំទូលាយ</p>
+                                        <p class=" card-text text2">ការអប់រំទូលំទូលាយជាគន្លឹះដើម្បីបង្កើតសង្គមដែលមានចំណេះដឹងល្អ និងប្រសើរឡើង។ 
+                                            វាមានតួនាទីជំរុញសមត្ថភាពសម្រាប់កុមារនិងយុវវ័យក្នុងការអភិវឌ្ឍបញ្ញានិងជំនាញគ្រប់គ្រងជីវិតរបស់ពួកគេ។</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 swipper-zoom-in">
+                                <a href="" class=" text-decoration-none hover-effect">
+                                    <div class=" card border-0">
+                                        <img src="https://png.pngtree.com/background/20250103/original/pngtree-digital-transformation-background-picture-image_15494049.jpg" class=" card-img rounded-0 " style=" height: 150px; object-fit: cover;" alt="">
+                                        <p class=" card-title fw-medium mt-2 text">សារសំខាន់នៃការអប់រំទូលំទូលាយ</p>
+                                        <p class=" card-text text2">ការអប់រំទូលំទូលាយជាគន្លឹះដើម្បីបង្កើតសង្គមដែលមានចំណេះដឹងល្អ និងប្រសើរឡើង។ 
+                                            វាមានតួនាទីជំរុញសមត្ថភាពសម្រាប់កុមារនិងយុវវ័យក្នុងការអភិវឌ្ឍបញ្ញានិងជំនាញគ្រប់គ្រងជីវិតរបស់ពួកគេ។</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 swipper-zoom-in">
+                                <a href="" class=" text-decoration-none hover-effect">
+                                    <div class=" card border-0">
+                                        <img src="https://wallpapercat.com/w/full/0/7/2/2114778-2560x1440-desktop-hd-information-technology-background-photo.jpg" class=" card-img rounded-0 " style=" height: 150px; object-fit: cover;" alt="">
+                                        <p class=" card-title fw-medium mt-2 text">សារសំខាន់នៃការអប់រំទូលំទូលាយ</p>
+                                        <p class=" card-text text2">ការអប់រំទូលំទូលាយជាគន្លឹះដើម្បីបង្កើតសង្គមដែលមានចំណេះដឹងល្អ និងប្រសើរឡើង។ 
+                                            វាមានតួនាទីជំរុញសមត្ថភាពសម្រាប់កុមារនិងយុវវ័យក្នុងការអភិវឌ្ឍបញ្ញានិងជំនាញគ្រប់គ្រងជីវិតរបស់ពួកគេ។</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 swipper-zoom-in">
+                                <a href="" class=" text-decoration-none hover-effect">
+                                    <div class=" card border-0">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcIyuyr682Ns-_fyzfPlZLNF-CAuAAt_CTvA&s" class=" card-img rounded-0 " style=" height: 150px; object-fit: cover;" alt="">
+                                        <p class=" card-title fw-medium mt-2 text">សារសំខាន់នៃការអប់រំទូលំទូលាយ</p>
+                                        <p class=" card-text text2">ការអប់រំទូលំទូលាយជាគន្លឹះដើម្បីបង្កើតសង្គមដែលមានចំណេះដឹងល្អ និងប្រសើរឡើង។ 
+                                            វាមានតួនាទីជំរុញសមត្ថភាពសម្រាប់កុមារនិងយុវវ័យក្នុងការអភិវឌ្ឍបញ្ញានិងជំនាញគ្រប់គ្រងជីវិតរបស់ពួកគេ។</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 swipper-zoom-in">
+                                <a href="" class=" text-decoration-none hover-effect">
+                                    <div class=" card border-0">
+                                        <img src="https://images.pexels.com/photos/265152/pexels-photo-265152.jpeg?cs=srgb&dl=pexels-pixabay-265152.jpg&fm=jpg" class=" card-img rounded-0 " style=" height: 150px; object-fit: cover;" alt="">
+                                        <p class=" card-title fw-medium mt-2 text">សារសំខាន់នៃការអប់រំទូលំទូលាយ</p>
+                                        <p class=" card-text text2">ការអប់រំទូលំទូលាយជាគន្លឹះដើម្បីបង្កើតសង្គមដែលមានចំណេះដឹងល្អ និងប្រសើរឡើង។ 
+                                            វាមានតួនាទីជំរុញសមត្ថភាពសម្រាប់កុមារនិងយុវវ័យក្នុងការអភិវឌ្ឍបញ្ញានិងជំនាញគ្រប់គ្រងជីវិតរបស់ពួកគេ។</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+   
+
+    <footer class=" container-fluid bg-edit mt-5" style="background-color: var(--theme-bg);">
+        <div class="container">
+            <div class=" row pt-5 p-md-5 ">
+                <div class=" col-lg-5">
+                    <img src="../assets/img/khanSha.png"  style="width: 100px; object-fit: cover;" alt="">
+                        <div class=" card-body  mt-3">
+                        <p class=" card-text text-start" style="font-size: 14px;">បន្ទាប់ពីទំនេរក្នុងការសិក្សា​ ឬ​ ការងារផ្សេងៗអ្នកអាចចំណាយពេលជាមួយពួកយើង<br>
+                            ក្នុងការអានសៀវភៅប្រលោមលោកថ្មីៗទាំង​ "បរទេស & ខ្មែរ"។​ ជាពិសេសអ្នកក៏អាចកម្ម៉ង់ទិញសៀវភៅយកមកអានក៏បាន <br>​ <a href="#" class="link-hover" style="color:rgb(255, 183, 0); font-weight: 400;">ចឹងកុំនៅយូរតោះចាប់ផ្តើម!</a></p>
+                </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">link បន្ថែម</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="login-signup.html" class=" text-decoration-none text-body hover-text">ទិញសៀវភៅ</a>
+                                <a href="login-signup.html" class="text-decoration-none text-body hover-text">អាន</a>
+                                <a href="login-signup.html" class="text-decoration-none text-body hover-text">Rate ពួកយើង</a>
+                                <a href="blog-no-log.html" class="text-decoration-none text-body hover-text">ប្លុក</a>
+                                <a href="about-us-no-log.html" class="text-decoration-none text-body hover-text">អំពីយើង</a>
+                                <a href="contact-us-no-log.html" class="text-decoration-none text-body hover-text">ទំនាក់ទំនង</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-2 col-6">
+                    <div class=" card border-0 " style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ជំនួយ</h4>
+                            <div class=" card-link d-flex flex-column" style="line-height:  2rem;">
+                                <a href="" class=" text-decoration-none text-body hover-text">Help and Support</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Become Author</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Get the app</a>
+                                <a href="" class="text-decoration-none text-body hover-text">Tutorial</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" col-lg-3">
+                    <button class=" btn btn-warning rounded-circle z-3 position-fixed hvr-ripple-out2" id="backToTop"><i class="fa-duotone fa-solid fa-up-from-line fs-2 text-body"></i></button>
+                    <div class=" card border-0" style="background-color: var(--background-color);">
+                        <div class=" card-body">
+                            <h4 class=" card-title fw-bold text-warning">ទំនាក់ទំនង</h4>
+                            <p>54 St 606, Phnom Penh</p>
+                            <div class=" d-flex gap-2">
+                                <p>Email:</p>
+                                <a href="#">khanshaRead@gmail.com</a>
+                            </div>
+                            <div class=" d-flex">
+                                <p>Phone:</p>
+                                <p class=" fw-bold" style="font-size: 14px;">(855) 089 / 081 168168</p>
+                            </div>
+                            <div class=" d-flex">
+                                <a href="">
+                                    <a href="#"><img src="https://geeksui.codescandy.com/geeks/assets/images/svg/appstore.svg"
+                                        alt="" class="img-fluid" /></a>
+                                <a href="#" class="ms-2"><img
+                                        src="https://geeksui.codescandy.com/geeks/assets/images/svg/playstore.svg" alt=""
+                                        class="img-fluid" /></a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-0  py-2 mt-5" style="border-top: var(--border-top);">
+                    
+                    <div class="col-lg-10 col-12">
+                        <div class="d-lg-flex align-items-center">
+                            <div class="me-4">
+                                <span>© 2024 khanshaRead.com</span>
+                            </div>
+                            <div>
+                                <nav class="nav nav-footer ">
+                                    <a class="nav-link ps-0 text-body hover-text" href="#">Privacy Policy</a>
+                                    <a class="nav-link px-2 px-md-3 text-body hover-text" href="#">Cookie Notice </a>
+                                    <a class="nav-link text-body hover-text" href="#">Terms of Use</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            
+
+</body>
+ <!-- link js bootstrap  -->
+ <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/theme.js"></script>
+  <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <script src="../assets/js/swipper.js"></script>
+ <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+ <script src="../assets/js/animate.js"></script>
+ <script src="../assets/js/time_coundown.js"></script>
+ <script src="../assets/js/script.js"></script>
+</html>
