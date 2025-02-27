@@ -449,7 +449,7 @@ input[type="search"]::-webkit-search-cancel-button {
   position: absolute;
   width: 80px;
   height: 80px;
-  background: yellow;
+  background: rgb(255, 193, 7);
   opacity: 0.8;
   border: 2px solid #fff;
   box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.5);
@@ -468,15 +468,15 @@ input[type="search"]::-webkit-search-cancel-button {
 @keyframes rotate {
   0% {
       transform: rotateX(0deg) rotateY(0deg);
-      box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.7);
+      box-shadow: 0 0 10px 5px rgb(255, 193, 7,0.7);
   }
   50% {
       transform: rotateX(180deg) rotateY(180deg);
-      box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.9);
+      box-shadow: 0 0 20px 10px rgb(255, 193, 7,0.9);
   }
   100% {
       transform: rotateX(360deg) rotateY(360deg);
-      box-shadow: 0 0 10px 5px rgba(255, 255, 0, 0.7);
+      box-shadow: 0 0 10px 5px rgb(255, 193, 7,0.7);
   }
 }
 
@@ -485,5 +485,5 @@ input[type="search"]::-webkit-search-cancel-button {
   margin-top: 40px;
   font-size: 2rem;
   font-weight: 500;
-  color: rgba(255, 255, 0, 0.9);
+  color: rgb(255, 193, 7);
 }
