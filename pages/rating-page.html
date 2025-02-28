@@ -746,33 +746,5 @@
  <script src="../assets/js/time_coundown.js"></script>
  <script src="../assets/js/show-all-line-mul.js"></script>
  <script src="../assets/js/script.js"></script>
- <script>
-    document.querySelectorAll('.star-rating label').forEach((label) => {
-      label.addEventListener('mouseover', function() {
-        const allLabels = Array.from(label.parentNode.children);
-        allLabels.forEach((sibling) => {
-          sibling.style.color = '#ccc';
-        });
-        let current = label;
-        while (current) {
-          current.style.color = '#f39c12';
-          current = current.nextElementSibling;
-        }
-      });
-    });
-  
-    document.querySelectorAll('.star-rating input').forEach((input) => {
-      input.addEventListener('change', function() {
-        const allLabels = Array.from(input.parentNode.children);
-        allLabels.forEach((sibling) => {
-          sibling.style.color = '#ccc';
-        });
-        let current = input;
-        while (current && current.tagName !== 'INPUT') {
-          current.style.color = '#f39c12';
-          current = current.nextElementSibling;
-        }
-      });
-    });
-  </script>
+ <script src="../assets/js/star-rating.js"> </script>
 </html>
