@@ -4,15 +4,17 @@
 
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #ffb700;
     border-radius: 10px;
+    transition: all 0.5s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: #555;
+    background-color: #ffcd4e;
 }
 
 .text-content {
